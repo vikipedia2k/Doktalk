@@ -1,21 +1,24 @@
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-	<title>HMS</title>
-	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
-<link rel="stylesheet" type="text/css" href="style1.css">
-<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
-<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
 
-<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<style >
-     .form-control {
-    border-radius: 0.75rem;
-}
-</style>
+        <link rel="stylesheet" href="/assets/css/style.css">
+
+    <title>DokTalk - Consult Doctor Online</title>
+
+
 
 <script>
     var check = function() {
@@ -43,165 +46,453 @@ function checklen()
   }  
 }
 
-</script>
 
+</script>
 </head>
 
-<!------ Include the above in your HEAD tag ---------->
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" >
-    <div class="container">
+ <!--############### Navbar Start ######################## -->
+ <nav class="navbar navbar fixed-top navbar-expand-sm navbar-light bg-light">
+        <div class="container">
+            <a href="#" class="navbar-brand mb-0 h1">
+                <img class="logo" src="/assets/img/doktalk-logo.svg" alt="doktalk-logo" />
+            </a>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-      <a class="navbar-brand js-scroll-trigger" href="#" style="margin-top: 10px;margin-left:-65px;font-family: 'IBM Plex Sans', sans-serif;"><h4><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp GLOBAL HOSPITALS</h4></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item" style="margin-right: 40px;">
-            <a class="nav-link js-scroll-trigger" href="index.php" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>HOME</h6></a>
-          </li>
-  
-          <li class="nav-item" style="margin-right: 40px;">
-            <a class="nav-link js-scroll-trigger" href="services.html" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>ABOUT US</h6></a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="contact.html" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>CONTACT</h6></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-	
-
-<div class="container register" style="font-family: 'IBM Plex Sans', sans-serif;">
-                <div class="row">
-                    <div class="col-md-3 register-left" style="margin-top: 10%;right: 5%">
-                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-                        <h3>Welcome</h3>
-                       
-                    </div>
-                    <div class="col-md-9 register-right" style="margin-top: 40px;left: 80px;">
-                        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist" style="width: 40%;">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Patient</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Doctor</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#admin" role="tab" aria-controls="admin" aria-selected="false">Receptionist</a>
-                            </li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#consult" class="nav-link">
+                            Consult
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item active">
+                        <a href="#pharmacy" class="nav-link">
+                            Pharmacy
+                        </a>
+                    </li> -->
+                    <li class="nav-item dropdown">
+                        <a href="#for-doctors" class="nav-link 
+                    dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            For Doctors
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a href="/doctors/doctor-login" class="dropdown-item">Login</a></li>
+                            <li><a href="/doctors/doctor-register" class="dropdown-item">Sign up</a></li>
                         </ul>
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <h3 class="register-heading">Register as Patient</h3>
-                                <form method="post" action="func2.php">
-                                <div class="row register-form">
-                                    
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control"  placeholder="First Name *" name="fname"  onkeydown="return alphaOnly(event);" required/>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Your Email *" name="email"  />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Password *" id="password" name="password" onkeyup='check();' required/>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <div class="maxl">
-                                                <label class="radio inline"> 
-                                                    <input type="radio" name="gender" value="Male" checked>
-                                                    <span> Male </span> 
-                                                </label>
-                                                <label class="radio inline"> 
-                                                    <input type="radio" name="gender" value="Female">
-                                                    <span>Female </span> 
-                                                </label>
-                                            </div>
-                                            <a href="index1.php">Already have an account?</a>
-                                        </div>
-                                    </div>
-                                
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Last Name *" name="lname" onkeydown="return alphaOnly(event);" required/>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <input type="tel" minlength="10" maxlength="10" name="contact" class="form-control" placeholder="Your Phone *"  />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control"  id="cpassword" placeholder="Confirm Password *" name="cpassword"  onkeyup='check();' required/><span id='message'></span>
-                                        </div>
-                                        <input type="submit" class="btnRegister" name="patsub1" onclick="return checklen();" value="Register"/>
-                                    </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#blog" class="nav-link">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#about" class="nav-link" onclick="myFunction()">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#contact" class="nav-link">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <form class="d-flex">
+                <a href="/users/login"><button type="button" class="btn
+                btn-primary">Login | Sign up</button></a>
+            </form>
+        </div>
+    </nav>
 
-                                </div>
-                            </form>
-                            </div>
+    <!--############### Navbar End ######################## -->
 
-                            
-                            <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                <h3  class="register-heading">Login as Doctor</h3>
-                                <form method="post" action="func1.php">
-                                <div class="row register-form">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="User Name *" name="username3" onkeydown="return alphaOnly(event);" required/>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Password *" name="password3" required/>
-                                        </div>
-                                        
-                                        <input type="submit" class="btnRegister" name="docsub1" value="Login"/>
-                                    </div>
-                                </div>
-                            </form>
-                            </div>
+    <!--############### Home Start ######################## -->
 
+    <section class="home" id="home">
+        <div class="container">
+            <div class="row min-vh-100 align-items-center text-left text-md-left">            
+                <div class="col-md-6 pr-md-5">
+                    <img src="/assets/img/doctor.png" class="img-fluid" height="auto" alt="doctor-image" width="100%">
+                </div>
+                <div class="content col-md-6 pl-md-5">
+                    <h1>We are here</h1>
+                    <h1>for your care.</h1>
+                    <h5>Stay Home. Consult Doctors Online.</h5>
+                    <a href="/users/login"><button class="button">Book Appointment</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                            <div class="tab-pane fade show" id="admin" role="tabpanel" aria-labelledby="profile-tab">
-                                <h3  class="register-heading">Login as Admin</h3>
-                                <form method="post" action="func3.php">
-                                <div class="row register-form">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="User Name *" name="username1" onkeydown="return alphaOnly(event);" required/>
-                                        </div>
-                                        
+    <!--############### Home End ######################## -->
 
+    <!--############### Consult Start ######################## -->
+    <section class="top-departments" id="consult" style="background-color: #e3edf3e0;">
+        <div class="container">
+            <div class="col-md min-vh-50">
+                <div class="row py-3">
+                    <h3 class="text-center">Consult Doctors from anywhere, anytime.</h3>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row my-3">
+                    <div class="col-md-9">
+                        <h2>Top Departments</h2>
+                        <p>Private online consultations with doctors in all departments</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="departments.html"><button type="button" class="btn btn-primary btn-sm" alt="view-all">View
+                                all</button></a>
+                    </div>
+                </div>
+            </div>
 
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Password *" name="password2" required/>
-                                        </div>
-                                        
-                                        <input type="submit" class="btnRegister" name="adsub" value="Login"/>
-                                    </div>
-                                </div>
-                            </form>
+            <div class="row mx-auto">
+                <div class="col-md d-flex align-items-center">
+                    <div class="card mx-1" style="width: 14rem; ">
+                        <img src="/assets/img/gen-physician.svg" class="card-img-top" alt="diet">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-center"><a href="general-physician.html">General Physician</a></h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md d-flex align-items-center">
+                        <div class="card mx-1" style="width: 14rem; ">
+                            <img src="/assets/img/dietitian.svg" class="card-img-top" alt="diet">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-center"><a href="dietitian.html">Dietitian</a></h5>
                             </div>
                         </div>
 
+                        <div class="col-md d-flex align-items-center">
+                            <div class="card mx-1" style="width: 14rem;">
+                                <img src="/assets/img/psychologist.svg" class="card-img-top" alt="diet">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-center"><a href="psychologist.html">Psychologist</a></h5>
+                                </div>
+                            </div>
+
+                            <div class="col-md d-flex align-items-center">
+                                <div class="card mx-1" style="width: 14rem;">
+                                    <img src="/assets/img/dermatologist.svg" class="card-img-top" alt="diet">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title text-center"><a href="dermatologist.html">Dermatologist</a></h5>
+                                    </div>
+                                </div>
+
+                                <div class="col-md d-flex align-items-center">
+                                    <div class="card mx-1" style="width: 14rem;">
+                                        <img src="/assets/img/ayurveda.svg" class="card-img-top" alt="diet">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title text-center"><a href="ayurveda.html">Ayurveda</a></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    </section>
+
+    <section class="top-doctors" id="consult" style="background-color: #e3edf3e0;">
+        <div class="container pt-4">
+            <div class="col-md min-vh-50">
+                <div class="container">
+                    <div class="row my-3">
+                        <div class="col-md-9">
+                            <h2>Book an appointment for consultation</h2>
+                            <p>Find experienced doctors across all specialties</p>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="#"><button type="button" class="btn btn-primary btn-sm" alt="view-all">View
+                                    all</button></a>
+                        </div>
                     </div>
                 </div>
 
+                <div class="row mx-auto">
+                    <div class="col-md d-flex align-items-center">
+                        <div class="card" style="width: 14rem;">
+                            <img src="/assets/img/male-doctor.svg" class="card-img-top" alt="diet">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-center"><a href="#">Dr. Sanjay Raut</a></h5>
+                                <p class="description"><small>MBBS</small><br>
+                                    <small>Pune, Maharashtra</small>
+                                </p>
+                                <button class="btn-1 btn-primary btn-sm doctor">Consult Now</button>
+                            </div>
+                        </div>
+
+                        <div class="col-md d-flex align-items-center">
+                            <div class="card" style="width: 14rem;">
+                                <img src="/assets/img/female-doctor.svg" class="card-img-top" alt="diet">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-center"><a href="#">Dr. Sneha Gupta</a>
+                                    </h5>
+                                    <p class="description"><small>MBBS</small><br>
+                                        <small>New Delhi, India</small>
+                                    </p>
+                                    <button class="btn-1 btn-primary btn-sm doctor">Consult Now</button>
+                                </div>
+                            </div>
+
+                            <div class="col-md d-flex align-items-center">
+                                <div class="card" style="width: 14rem;">
+                                    <img src="/assets/img/male-doctor.svg" class="card-img-top" alt="diet">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title text-center"><a href="#">Dr. Manoj Sharma</a></h5>
+                                        <p class="description"><small>BAMS</small><br>
+                                            <small>Pune, Maharashtra</small>
+                                        </p>
+                                        <button class="btn-1 btn-primary btn-sm doctor">Consult Now</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-md d-flex align-items-center">
+                                    <div class="card" style="width: 14rem;">
+                                        <img src="/assets/img/male-doctor.svg" class="card-img-top" alt="diet">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title text-center"><a href="#">Dr. Yash Patil</a></h5>
+                                            <p class="description"><small>MBBS, MD</small><br>
+                                                <small>Hyderabad, Telangana</small>
+                                            </p>
+                                            <button class="btn-1 btn-primary btn-sm doctor">Consult Now</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md d-flex align-items-center">
+                                        <div class="card" style="width: 14rem;">
+                                            <img src="/assets/img/male-doctor.svg" class="card-img-top" alt="diet">
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title text-center"><a href="#">Dr. Akshay Bele</a></h5>
+                                                <p class="description"><small>MBBS, BDS</small><br>
+                                                    <small>Mumbai, Maharashtra</small>
+                                                </p>
+                                                <button class="btn-1 btn-primary btn-sm doctor">Consult Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    </section>
+
+    <!--############### Consult End ######################## -->
+
+    <!--############### Blog Start ######################## -->
+    <div class="health-blog pt-80 pb-80 bg-grey-1" id="blog">
+        <div class="container">
+            <div class="heading-block">
+                <h3 class="heading font-bold">Health Blog</h3>
+                <p class="sub-heading">Health articles that keep you informed about good health practices</p>
             </div>
-    </body>
+            <div class="row mb-5">
+                <div class=" col-md-3">
+                    <div class="card1 row g-0 overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col">
+                            <img src="/assets/img/caregiver.svg" alt="post-img">
+    
+                        </div>
+                        <div class="post-content col p-4 d-flex flex-column position-static">
+                            <p class="d-inline-block mb-2 text-primary">Coronavirus Updates</p>
+                            <div class="mb-1 text-muted">May 1</div>
+                            <p class="card-text mb-auto">Caring for COVID-19 patients at home</p>
+                            <a href="blog1.html" class="stretched-link">Read more</a>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="col-md-3">
+                    <div class="card2 row g-0 overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col">
+                            <img src="/assets/img/summer-hot-weather.svg" alt="">
+                        </div>
+                        <div class="post-content col p-4 d-flex flex-column position-static">
+                            <p class="d-inline-block mb-2 text-primary">Respiratory Health</p>
+                            <div class="mb-1 text-muted">Apr 30</div>
+                            <p class="card-text mb-auto">Does hot weather affect your breathing and lungs?</p>
+                            <a href="#" class="stretched-link">Read more</a>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="col-md-3">
+                    <div class="card3 row g-0 overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col">
+                            <img src="/assets/img/coffee.svg" alt="">
+                        </div>
+                        <div class="post-content col p-4 d-flex flex-column position-static">
+                            <p class="d-inline-block mb-2 text-primary">Heart Conditions</p>
+                            <div class="mb-1 text-muted">Apr 30</div>
+                            <p class="card-text mb-auto">The truth about coffee and heart health</p>
+                            <a href="#" class="stretched-link">Read more</a>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="col-md-3">
+                    <div class="card4 row g-0 overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col">
+                            <img src="/assets/img/coconut.svg" alt="">
+    
+                        </div>
+                        <div class="post-content col p-4 d-flex flex-column position-static">
+                            <p class="d-inline-block mb-2 text-primary">Digestive Health</p>
+                            <div class="mb-1 text-muted">Apr 29</div>
+                            <p class="card-text mb-auto">Gastritis: Common home remedies</p>
+                            <a href="#" class="stretched-link">Read more</a>
+                        </div>
+    
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>        
+        
+    <!--############### Blog End ######################## -->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--############### About Start ######################## -->
+<div class="section" id="about" style="background-color: #e3edf3e0;">
+    <div class="container">
+    <div class="row about-us-head">
+        <h3 class="text-center">About Us</h3>
+    </div>
+    <div class="row featurette1 d-flex justify-content-center align-items-center">
+        <div class="col-md-7">
+            <h2 class="featurette-heading"><strong>We have the best doctors
+                <span class="text-muted">available in the city.</span></strong>
+            </h2>
+            <p class="lead">
+                We connect you with the best doctors with seamless online appointment booking to provide you with the
+                best primary care.
+            </p>
+        </div>
+        <div class="col-md-5">
+            <img src="/assets/img/doctor_nurse.svg" alt="about-image2">   
+        </div>    
+    </div>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-    </html>
+    <div class="row featurette2 d-flex justify-content-center align-items-center">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading"><strong>Quality care for you<br>
+                <span class="text-muted">and the ones you love.</span></strong>
+            </h2>
+            <p class="lead">We provide primary care when you need it, get personalized and
+                high quality healthcare by talking to top medical doctors.
+            </p>
+        </div>
+        <div class="col-md-5">
+            <img src="/assets/img/happy_patients.svg" alt="about-image2">
+        </div>
+    </div>    
+        <script>
+            function myFunction() {
+            var elmnt = document.getElementById("about");
+            elmnt.scrollIntoView();
+            }
+        </script>
+    </div>
+</div>
 
-  
+    <!--############### About End ######################## -->
+    
+    <!-- <div class="page-divider"></div> -->
+
+ <!--######################## Footer start ##################################-->
+<footer class="text-dark" id="contact">
+    <!-- Grid container -->
+    <div class="container p-4">
+        <!-- Section: Social media -->
+        <section class="text-center mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"><i class="fa fa-facebook"></i></a>
+
+            <!-- Twitter -->
+            <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"><i class="fa fa-twitter"></i></a>
+
+            <!-- Google -->
+            <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"><i class="fa fa-google"></i></a>
+
+            <!-- Instagram -->
+            <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"><i class="fa fa-instagram"></i></a>
+
+            <!-- Github -->
+            <!--   <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"><i class="fa fa-github"></i></a>   -->
+        </section>
+        <!-- Section: Social media -->
+   </div>
+        <!-- Section: Form -->
+        <section class="contact-us1">
+            <!--Grid row-->
+            <div class="row d-flex">
+                    <div class="dolktalk-footer-logo col-md-7">
+                        <img src="/assets/img/doktalk-logo.svg" alt="footer-logo">
+                        <div class="dolktalk-about-footer row d-flex col-md-7">
+                        <p>We connect you with the best doctors with seamless online appointment booking to provide you with the best health care.</p>
+                    </div>
+                    </div>
+
+                    <div class="contact-us-form col-md-5 contact-us2">
+                        <p class="pt-2">
+                            <strong>Contact us</strong>
+                        </p>
+                        <div class="form-outline form-dark mb-4">
+                            <form>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Your name" />
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Your email" required/>
+                            <textarea cols="12" rows="3" id="message" class="form-control"
+                                placeholder="Message"></textarea><br>
+                            <a href=""><button type="submit" class="footer-submit btn btn-primary btn-sm">
+                                Submit</button></a> 
+                            </form>
+                        </div>
+                    </div>
+            </div>
+        </section>
+    </div>
+    <!-- Copyright -->
+    <div class="copyright text-center text-white p-3" style="background-color: #0d6efd;">
+        Copyright © 2021, DokTalk. All rights reserved. | Made with &#x1f9e1; by Group 8
+    </div>
+    <!-- Copyright -->
+</footer>
+
+ <!--######################## Footer End ##################################-->
+
+    
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,800;0,900;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+/* navbar start */
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 427px;
+    margin-bottom: 0;
+    list-style: none;
+    
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0);
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #314BF6;
+}
+
+.navbar .d-flex .btn-primary{
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+} 
+/* navbar end */
+
+/* general physician - content start */
+
+.heading-block .heading{
+    margin-top: 1.5rem;
+}
+
+.about-column{
+    margin-top: 3rem;
+}
+
+.about-img{
+    padding-left: 8rem;
+}
+
+.about-head{
+    margin-top: 3rem;
+}
+
+
+
+
+.physicians-head{
+    padding-left: 8rem;
+
+}
+/* general physician - content end */
+
+/* separator start */
+.separator {
+    margin: 50px 127px 45px;
+    background-color: rgb(216, 216, 216);
+    opacity: 0.4;
+    height: 2px;
+    width: 82%;
+}
+/* separator end */
+
+
+/* general physicians cards start*/
+
+.card {
+    max-width: 350px;
+    margin-top: 2em;
+    margin-left: 22em;
+    border-radius: 22px;
+    box-shadow: 0 0 5px #a9a9a9;
+  }
+
+.doc-img{
+    padding: 0px;
+    margin-top: 0px;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 21px 0rem;
+}
+
+.card-content{
+    margin-left: 15px;
+    overflow: hidden;
+}  
+
+.card-body .card-text{
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+
+.doc-info{
+    margin-left: -66px;
+}  
+
+.btn-group-sm>.btn, .btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 1.2rem;
+    padding-bottom: 0px;
+    box-shadow: 0 0 3px #a9a9a9;
+}
+
+.profile-btn{
+    margin-left: 5px;
+}
+.book-btn{
+    margin-left: 5px;
+}
+.chat-btn{
+    margin-left: 5px;
+}
+.call-btn{
+    margin-left: 5px;
+}
+
+.button-section{
+    padding-top: 0px;
+    margin-left: 146px;
+    
+    
+}
+
+.button-section .btn-sm{
+    padding-bottom: 3px;
+    margin-bottom: 13px;
+    margin-left: 10px;
+} 
+
+.doc-info-right .card-text{
+    margin-top: 59px;
+    font-size: 15px;
+}
+
+.doc-info-right .time-slots{
+    font-size: 15px;
+    margin-top: -14px;
+}
+
+  
+/* general physicians cards end*/
+
+/* copyright start */
+
+.copyright{
+    font-size: 14px;
+    margin-top: 2rem;
+   }
+
+/* copyright end */

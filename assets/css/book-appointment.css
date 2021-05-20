@@ -1,0 +1,111 @@
+/* Book Appointment css start */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+    font-size: 13px;
+    line-height: 2;
+    background: #e3edf3e0;
+    font-weight: 400;
+    font-family: Poppins; 
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .4rem .75rem;
+    font-family: arial;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 1.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-group{
+    padding: 3px;
+}
+
+.content-body {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+
+.card-footer{
+    text-align: center;
+    padding: .5rem 1rem;
+    background-color: #ffffff;
+    border-top: 1px;
+}
+
+.card-header:first-child {
+    border-radius: calc(1.25rem - 1px) calc(1.25rem - 1px) 0 0;
+}
+
+.card-header {
+    padding: .5rem 1rem;
+    margin-bottom: 0;
+    background-color: #ffffff;
+    border-bottom: 0px;
+    text-align: center;
+}
+
+.card-title {
+    margin-bottom: 0.5rem;
+    font-size: 23px;
+    padding-top: 12px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #ffffff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 1.25rem;
+    margin-top: -1em;
+}
+
+.doktalk{
+    margin-top: 1rem;
+    text-align: center;
+}
+.btn-group-sm>.btn, .btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: .875rem;
+    border-radius: 1.2rem;
+    margin-top: 20px;
+}
+
+.book-img {
+    margin-left: 24rem;
+    margin-right: 1rem;
+    margin-top: -36rem;
+    margin-bottom: 11rem;
+}
+
+/* Book Appointment css end */
