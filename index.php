@@ -85,8 +85,8 @@ function checklen()
                             For Doctors
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a href="/doctors/doctor-login" class="dropdown-item">Login</a></li>
-                            <li><a href="/doctors/doctor-register" class="dropdown-item">Sign up</a></li>
+                            <li><a href="/assets/doctor-login.php" class="dropdown-item">Login</a></li>
+                            <li><a href="/assets/doctor-signup.php" class="dropdown-item">Sign up</a></li>
                         </ul>
                     </li>
                     <li class="nav-item active">
@@ -107,7 +107,7 @@ function checklen()
                 </ul>
             </div>
             <form class="d-flex">
-                <a href="/users/login"><button type="button" class="btn
+                <a href="/assets/patient-login.php"><button type="button" class="btn
                 btn-primary">Login | Sign up</button></a>
             </form>
         </div>
@@ -127,7 +127,7 @@ function checklen()
                     <h1>We are here</h1>
                     <h1>for your care.</h1>
                     <h5>Stay Home. Consult Doctors Online.</h5>
-                    <a href="/users/login"><button class="button">Book Appointment</button></a>
+                    <a href="/assets/book-appointment.html"><button class="button">Book Appointment</button></a>
                 </div>
             </div>
         </div>
@@ -150,7 +150,7 @@ function checklen()
                         <p>Private online consultations with doctors in all departments</p>
                     </div>
                     <div class="col-md-3">
-                        <a href="departments.html"><button type="button" class="btn btn-primary btn-sm" alt="view-all">View
+                        <a href="/assets/departments.html"><button type="button" class="btn btn-primary btn-sm" alt="view-all">View
                                 all</button></a>
                     </div>
                 </div>
@@ -161,7 +161,7 @@ function checklen()
                     <div class="card mx-1" style="width: 14rem; ">
                         <img src="/assets/img/gen-physician.svg" class="card-img-top" alt="diet">
                         <div class="card-body text-center">
-                            <h5 class="card-title text-center"><a href="general-physician.html">General Physician</a></h5>
+                            <h5 class="card-title text-center"><a href="/assets/general-physician.html">General Physician</a></h5>
                         </div>
                     </div>
 
@@ -169,7 +169,7 @@ function checklen()
                         <div class="card mx-1" style="width: 14rem; ">
                             <img src="/assets/img/dietitian.svg" class="card-img-top" alt="diet">
                             <div class="card-body text-center">
-                                <h5 class="card-title text-center"><a href="dietitian.html">Dietitian</a></h5>
+                                <h5 class="card-title text-center"><a href="/assets/dietitian.html">Dietitian</a></h5>
                             </div>
                         </div>
 
@@ -177,7 +177,7 @@ function checklen()
                             <div class="card mx-1" style="width: 14rem;">
                                 <img src="/assets/img/psychologist.svg" class="card-img-top" alt="diet">
                                 <div class="card-body text-center">
-                                    <h5 class="card-title text-center"><a href="psychologist.html">Psychologist</a></h5>
+                                    <h5 class="card-title text-center"><a href="/assets/psychologist.html">Psychologist</a></h5>
                                 </div>
                             </div>
 
@@ -185,7 +185,7 @@ function checklen()
                                 <div class="card mx-1" style="width: 14rem;">
                                     <img src="/assets/img/dermatologist.svg" class="card-img-top" alt="diet">
                                     <div class="card-body text-center">
-                                        <h5 class="card-title text-center"><a href="dermatologist.html">Dermatologist</a></h5>
+                                        <h5 class="card-title text-center"><a href="/assets/dermatologist.html">Dermatologist</a></h5>
                                     </div>
                                 </div>
 
@@ -193,7 +193,7 @@ function checklen()
                                     <div class="card mx-1" style="width: 14rem;">
                                         <img src="/assets/img/ayurveda.svg" class="card-img-top" alt="diet">
                                         <div class="card-body text-center">
-                                            <h5 class="card-title text-center"><a href="ayurveda.html">Ayurveda</a></h5>
+                                            <h5 class="card-title text-center"><a href="/assets/ayurveda.html">Ayurveda</a></h5>
 
                                         </div>
                                     </div>
@@ -304,7 +304,7 @@ function checklen()
                             <p class="d-inline-block mb-2 text-primary">Coronavirus Updates</p>
                             <div class="mb-1 text-muted">May 1</div>
                             <p class="card-text mb-auto">Caring for COVID-19 patients at home</p>
-                            <a href="blog1.html" class="stretched-link">Read more</a>
+                            <a href="/assets/blog1.html" class="stretched-link">Read more</a>
                         </div>
     
                     </div>

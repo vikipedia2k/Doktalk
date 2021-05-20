@@ -64,7 +64,7 @@
                                   </div>
 
                                   <div class="col-6 login-link"> 
-                                    <a href="/users/login" class="login-link">Already have an account?</a>                  
+                                    <a href="/assets/patient-login.php" class="login-link">Already have an account?</a>                  
                                   </div> 
 
                                 

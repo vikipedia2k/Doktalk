@@ -10,7 +10,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="css/login.css">
     
     <title>Login</title>
     <!-- <style>
@@ -50,17 +50,16 @@
     </style> -->
  </head>
 <body> 
-  <%- include("./partials/messages"); %>
-  <form action="/doctors/doctor-login" method="POST">
+  <form action="/assets/doctor-login.php" method="POST">
     <section class="sign-in">
       <div class="container">
         <div class="row doktalk col-md-6">
-         <a href="/"> <img src="/img/doktalk-logo.svg" class="doktalk-logo" alt="logo"> </a> 
+         <a href="/"> <img src="img/doktalk-logo.svg" class="doktalk-logo" alt="logo"> </a> 
         </div>
         <div class="signin-content">
           
           <div class="signin-image">
-            <figure><img src="/img/signin-image.jpg" alt="singin image"></figure>
+            <figure><img src="img/signin-image.jpg" alt="singin image"></figure>
           </div>
   
           <div class="signin-form">
@@ -82,7 +81,7 @@
                 <button type="submit" class="btn-submit btn-primary btn-sm btn-block">Login</button>
               </div>
             </form>
-            <a href="/doctors/doctor-register" class="signup-link">Don't have an account?</a>
+            <a href="/assets/doctor-signup.php" class="signup-link">Don't have an account?</a>
             <div class="social-login">
               <span class="social-label">Or login with</span>
               <ul class="socials">

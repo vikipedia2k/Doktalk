@@ -81,7 +81,7 @@
                 <button type="submit" class="btn-submit btn-primary btn-sm btn-block">Login</button>
               </div>
             </form>
-            <a href='/users/register' class="signup-link">Don't have an account?</a>
+            <a href='/assets/patient-signup.php' class="signup-link">Don't have an account?</a>
             <!-- <div class="social-login">
               <span class="social-label">Or login with</span>
               <ul class="socials">
