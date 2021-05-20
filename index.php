@@ -14,7 +14,7 @@
     
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/style.css">
 
     <title>DokTalk - Consult Doctor Online</title>
 
@@ -55,7 +55,7 @@ function checklen()
  <nav class="navbar navbar fixed-top navbar-expand-sm navbar-light bg-light">
         <div class="container">
             <a href="#" class="navbar-brand mb-0 h1">
-                <img class="logo" src="/assets/img/doktalk-logo.svg" alt="doktalk-logo"/>
+                <img class="logo" src="assets/img/doktalk-logo.svg" alt="doktalk-logo" />
             </a>
             <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,8 +85,8 @@ function checklen()
                             For Doctors
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a href="/assets/doctor-login.php" class="dropdown-item">Login</a></li>
-                            <li><a href="/assets/doctor-signup.php" class="dropdown-item">Sign up</a></li>
+                            <li><a href="doctor-login.php" class="dropdown-item">Login</a></li>
+                            <li><a href="doctor-signup.php" class="dropdown-item">Sign up</a></li>
                         </ul>
                     </li>
                     <li class="nav-item active">
@@ -107,7 +107,7 @@ function checklen()
                 </ul>
             </div>
             <form class="d-flex">
-                <a href="/assets/patient-login.php"><button type="button" class="btn
+                <a href="patient-login.php"><button type="button" class="btn
                 btn-primary">Login | Sign up</button></a>
             </form>
         </div>
@@ -121,13 +121,13 @@ function checklen()
         <div class="container">
             <div class="row min-vh-100 align-items-center text-left text-md-left">            
                 <div class="col-md-6 pr-md-5">
-                    <img src="/assets/img/doctor.png" class="img-fluid" height="auto" alt="doctor-image" width="100%">
+                    <img src="assets/img/doctor.png" class="img-fluid" height="auto" alt="doctor-image" width="100%">
                 </div>
                 <div class="content col-md-6 pl-md-5">
                     <h1>We are here</h1>
                     <h1>for your care.</h1>
                     <h5>Stay Home. Consult Doctors Online.</h5>
-                    <a href="/assets/book-appointment.html"><button class="button">Book Appointment</button></a>
+                    <a href="assets/book-appointment.html"><button class="button">Book Appointment</button></a>
                 </div>
             </div>
         </div>
@@ -150,7 +150,7 @@ function checklen()
                         <p>Private online consultations with doctors in all departments</p>
                     </div>
                     <div class="col-md-3">
-                        <a href="/assets/departments.html"><button type="button" class="btn btn-primary btn-sm" alt="view-all">View
+                        <a href="assets/departments.html"><button type="button" class="btn btn-primary btn-sm" alt="view-all">View
                                 all</button></a>
                     </div>
                 </div>
@@ -159,41 +159,41 @@ function checklen()
             <div class="row mx-auto">
                 <div class="col-md d-flex align-items-center">
                     <div class="card mx-1" style="width: 14rem; ">
-                        <img src="/assets/img/gen-physician.svg" class="card-img-top" alt="diet">
+                        <img src="assets/img/gen-physician.svg" class="card-img-top" alt="diet">
                         <div class="card-body text-center">
-                            <h5 class="card-title text-center"><a href="/assets/general-physician.html">General Physician</a></h5>
+                            <h5 class="card-title text-center"><a href="assets/general-physician.html">General Physician</a></h5>
                         </div>
                     </div>
 
                     <div class="col-md d-flex align-items-center">
                         <div class="card mx-1" style="width: 14rem; ">
-                            <img src="/assets/img/dietitian.svg" class="card-img-top" alt="diet">
+                            <img src="assets/img/dietitian.svg" class="card-img-top" alt="diet">
                             <div class="card-body text-center">
-                                <h5 class="card-title text-center"><a href="/assets/dietitian.html">Dietitian</a></h5>
+                                <h5 class="card-title text-center"><a href="assets/dietitian.html">Dietitian</a></h5>
                             </div>
                         </div>
 
                         <div class="col-md d-flex align-items-center">
                             <div class="card mx-1" style="width: 14rem;">
-                                <img src="/assets/img/psychologist.svg" class="card-img-top" alt="diet">
+                                <img src="assets/img/psychologist.svg" class="card-img-top" alt="diet">
                                 <div class="card-body text-center">
-                                    <h5 class="card-title text-center"><a href="/assets/psychologist.html">Psychologist</a></h5>
+                                    <h5 class="card-title text-center"><a href="assets/psychologist.html">Psychologist</a></h5>
                                 </div>
                             </div>
 
                             <div class="col-md d-flex align-items-center">
                                 <div class="card mx-1" style="width: 14rem;">
-                                    <img src="/assets/img/dermatologist.svg" class="card-img-top" alt="diet">
+                                    <img src="assets/img/dermatologist.svg" class="card-img-top" alt="diet">
                                     <div class="card-body text-center">
-                                        <h5 class="card-title text-center"><a href="/assets/dermatologist.html">Dermatologist</a></h5>
+                                        <h5 class="card-title text-center"><a href="assets/dermatologist.html">Dermatologist</a></h5>
                                     </div>
                                 </div>
 
                                 <div class="col-md d-flex align-items-center">
                                     <div class="card mx-1" style="width: 14rem;">
-                                        <img src="/assets/img/ayurveda.svg" class="card-img-top" alt="diet">
+                                        <img src="assets/img/ayurveda.svg" class="card-img-top" alt="diet">
                                         <div class="card-body text-center">
-                                            <h5 class="card-title text-center"><a href="/assets/ayurveda.html">Ayurveda</a></h5>
+                                            <h5 class="card-title text-center"><a href="assets/ayurveda.html">Ayurveda</a></h5>
 
                                         </div>
                                     </div>
@@ -221,7 +221,7 @@ function checklen()
                 <div class="row mx-auto">
                     <div class="col-md d-flex align-items-center">
                         <div class="card" style="width: 14rem;">
-                            <img src="/assets/img/male-doctor.svg" class="card-img-top" alt="diet">
+                            <img src="assets/img/male-doctor.svg" class="card-img-top" alt="diet">
                             <div class="card-body text-center">
                                 <h5 class="card-title text-center"><a href="#">Dr. Sanjay Raut</a></h5>
                                 <p class="description"><small>MBBS</small><br>
@@ -233,7 +233,7 @@ function checklen()
 
                         <div class="col-md d-flex align-items-center">
                             <div class="card" style="width: 14rem;">
-                                <img src="/assets/img/female-doctor.svg" class="card-img-top" alt="diet">
+                                <img src="assets/img/female-doctor.svg" class="card-img-top" alt="diet">
                                 <div class="card-body text-center">
                                     <h5 class="card-title text-center"><a href="#">Dr. Sneha Gupta</a>
                                     </h5>
@@ -246,7 +246,7 @@ function checklen()
 
                             <div class="col-md d-flex align-items-center">
                                 <div class="card" style="width: 14rem;">
-                                    <img src="/assets/img/male-doctor.svg" class="card-img-top" alt="diet">
+                                    <img src="assets/img/male-doctor.svg" class="card-img-top" alt="diet">
                                     <div class="card-body text-center">
                                         <h5 class="card-title text-center"><a href="#">Dr. Manoj Sharma</a></h5>
                                         <p class="description"><small>BAMS</small><br>
@@ -258,7 +258,7 @@ function checklen()
 
                                 <div class="col-md d-flex align-items-center">
                                     <div class="card" style="width: 14rem;">
-                                        <img src="/assets/img/male-doctor.svg" class="card-img-top" alt="diet">
+                                        <img src="assets/img/male-doctor.svg" class="card-img-top" alt="diet">
                                         <div class="card-body text-center">
                                             <h5 class="card-title text-center"><a href="#">Dr. Yash Patil</a></h5>
                                             <p class="description"><small>MBBS, MD</small><br>
@@ -270,7 +270,7 @@ function checklen()
 
                                     <div class="col-md d-flex align-items-center">
                                         <div class="card" style="width: 14rem;">
-                                            <img src="/assets/img/male-doctor.svg" class="card-img-top" alt="diet">
+                                            <img src="assets/img/male-doctor.svg" class="card-img-top" alt="diet">
                                             <div class="card-body text-center">
                                                 <h5 class="card-title text-center"><a href="#">Dr. Akshay Bele</a></h5>
                                                 <p class="description"><small>MBBS, BDS</small><br>
@@ -297,7 +297,7 @@ function checklen()
                 <div class=" col-md-3">
                     <div class="card1 row g-0 overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div class="col">
-                            <img src="/assets/img/caregiver.svg" alt="post-img">
+                            <img src="assets/img/caregiver.svg" alt="post-img">
     
                         </div>
                         <div class="post-content col p-4 d-flex flex-column position-static">
@@ -313,7 +313,7 @@ function checklen()
                 <div class="col-md-3">
                     <div class="card2 row g-0 overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div class="col">
-                            <img src="/assets/img/summer-hot-weather.svg" alt="">
+                            <img src="assets/img/summer-hot-weather.svg" alt="">
                         </div>
                         <div class="post-content col p-4 d-flex flex-column position-static">
                             <p class="d-inline-block mb-2 text-primary">Respiratory Health</p>
@@ -328,7 +328,7 @@ function checklen()
                 <div class="col-md-3">
                     <div class="card3 row g-0 overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div class="col">
-                            <img src="/assets/img/coffee.svg" alt="">
+                            <img src="assets/img/coffee.svg" alt="">
                         </div>
                         <div class="post-content col p-4 d-flex flex-column position-static">
                             <p class="d-inline-block mb-2 text-primary">Heart Conditions</p>
@@ -343,7 +343,7 @@ function checklen()
                 <div class="col-md-3">
                     <div class="card4 row g-0 overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div class="col">
-                            <img src="/assets/img/coconut.svg" alt="">
+                            <img src="assets/img/coconut.svg" alt="">
     
                         </div>
                         <div class="post-content col p-4 d-flex flex-column position-static">
@@ -379,7 +379,7 @@ function checklen()
             </p>
         </div>
         <div class="col-md-5">
-            <img src="/assets/img/doctor_nurse.svg" alt="about-image2">   
+            <img src="assets/img/doctor_nurse.svg" alt="about-image2">   
         </div>    
     </div>
 
@@ -393,7 +393,7 @@ function checklen()
             </p>
         </div>
         <div class="col-md-5">
-            <img src="/assets/img/happy_patients.svg" alt="about-image2">
+            <img src="assets/img/happy_patients.svg" alt="about-image2">
         </div>
     </div>    
         <script>
@@ -437,7 +437,7 @@ function checklen()
             <!--Grid row-->
             <div class="row d-flex">
                     <div class="dolktalk-footer-logo col-md-7">
-                        <img src="/assets/img/doktalk-logo.svg" alt="footer-logo">
+                        <img src="assets/img/doktalk-logo.svg" alt="footer-logo">
                         <div class="dolktalk-about-footer row d-flex col-md-7">
                         <p>We connect you with the best doctors with seamless online appointment booking to provide you with the best health care.</p>
                     </div>
