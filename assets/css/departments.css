@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,800;0,900;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+/* navbar start */
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 427px;
+    margin-bottom: 0;
+    list-style: none;
+    
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0);
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #314BF6;
+}
+
+.navbar .d-flex .btn-primary{
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+} 
+/* navbar end */
+
+/* departments start */
+.top-departments h3{
+    
+    font-weight: 600;
+    margin-top: 74px;
+}
+
+
+.top-departments .btn{
+    margin-left: 225px;
+}
+
+.top-departments .d-flex {
+    display: flex!important;
+    margin-left: 22px;
+    margin-bottom: 5px;
+}
+
+.top-departments .card-title a{
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+}
+
+.top-departments .card-title a:hover{
+    opacity: 0.7;
+}
+
+.departments-heading{
+    padding-left: 3em;
+}
+
+.departments-heading h2{
+    font-weight: 500;
+    font-size: 24px;
+    margin-left: 0px;
+    padding-left: 0em;
+}
+
+.top-doctors .d-flex {
+    display: flex!important;
+    margin-left: 22px;
+} 
+
+.top-doctors h2{
+    font-size: 20px;
+    margin-left: 25px;
+    font-weight: 600;
+}
+
+.col-md-9 p{
+    margin-left: 25px;
+}
+
+.description p{
+    font-size: 15px;
+    margin-left: 0px;
+}
+
+.top-doctors .btn{
+    margin-left: 225px;
+}
+
+.card-body h5{
+    font-size: 17px;
+}
+
+.top-doctors .card-title a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.top-doctors .card-title a:hover{
+    opacity: 0.7;
+}
+
+.btn-group-sm>.btn, .btn-sm {
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    border-radius: 1.2rem;
+}
+
+.top-doctors{
+    margin-bottom: 45px;
+}
+
+.pt-4 {
+    padding-top: 1.5rem!important;
+    padding-bottom: 41px;
+}
+
+/* departments end */
+
+/* copyright start */
+
+.copyright{
+    font-size: 14px;
+    margin-top: 2rem;
+   }
+
+/* copyright end */

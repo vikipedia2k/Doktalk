@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 164 156">
+  <g id="Group_88" data-name="Group 88" transform="translate(-1033 -228)">
+    <path id="ic_person_24px" d="M40.533,43.518c10.092,0,18.267-8.842,18.267-19.759S50.626,4,40.533,4,22.267,12.842,22.267,23.759,30.441,43.518,40.533,43.518Zm0,9.879C28.34,53.4,4,60.016,4,73.156v9.879H77.067V73.156C77.067,60.016,52.726,53.4,40.533,53.4Z" transform="translate(1074 262)"/>
+    <g id="Ellipse_18" data-name="Ellipse 18" transform="translate(1033 228)" fill="none" stroke="#000" stroke-width="8">
+      <ellipse cx="82" cy="78" rx="82" ry="78" stroke="none"/>
+      <ellipse cx="82" cy="78" rx="78" ry="74" fill="none"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+  font-size: 13px;
+  line-height: 1.8;
+  background: #e3edf3e0;
+  font-weight: 400;
+  font-family: Poppins; }
+
+.container {
+  width: 51rem;
+  height: 776px;
+  background: #fff;
+  margin: 0 auto;
+  box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+}
+
+.doktalk {
+  flex: 0 0 auto;
+  width: 25%;
+  margin-top: 2rem;
+}
+
+.doktalk-logo {
+  margin-top: 1rem;
+  margin-left: 19rem;
+}
+
+.row {
+  --bs-gutter-x: 3.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x)/ -2);
+  margin-left: 0rem;
+}
+
+.row .right-col{
+  margin-left: -10em;
+}
+
+.register-form{
+ margin-top: -1em;
+}
+
+.form-control {
+  margin-left: 20px;
+  margin-top: 10px;
+  display: block;
+  width: 70%;
+  padding: .3rem .75rem;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid black;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 2rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-control::placeholder {
+  color: #6c757d;
+  opacity: 1;
+  font-size: 14px;
+}
+
+.form-title {
+margin-top: 15px;
+margin-left: 50px;
+margin-bottom: 0.5rem;
+font-weight: 500;
+line-height: 2.2;
+font-size: 26px;
+}
+
+.form-title .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  margin-right: calc(var(--bs-gutter-x)/ -2);
+  margin-left: calc(var(--bs-gutter-x)/ -2);
+}
+
+.signup-image {
+  margin-left: 30em;
+  margin-top: -32rem;
+}
+
+.col p {
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+
+.col{
+  margin-left: 25px;
+  padding-top: 9px;
+}
+
+.col-8 a{
+    color: #0d6efd;
+    text-decoration: none;
+    margin-top: 0px;
+}
+
+.btn-block {
+  width: 140%;
+  height: 32px;
+}
+
+.btn-signup {
+  border-radius: 1rem;
+  margin-left: 20px;
+  margin-top: 1rem;
+}
+
+
+.col input[type="radio"]{
+  margin-left: px;
+}
+
+.col-6 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.login-link {
+    margin-left: 27px;
+    margin-top: 18px;
+}
+
+
+.login-link a{
+  text-decoration: none; 
+
+}
+
+.login-link a:hover{
+  text-decoration: underline; 
+
+}
