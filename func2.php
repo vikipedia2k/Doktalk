@@ -1,38 +1,51 @@
 <?php
 session_start();
 $con=mysqli_connect("localhost","root","","myhmsdb");
+
 if(isset($_POST['patsub1'])){
 	$fname=$_POST['fname'];
   $lname=$_POST['lname'];
   $gender=$_POST['gender'];
   $email=$_POST['email'];
+  $age=$_POST['age'];
+  $address=$_POST['address'];
+  $city=$_POST['city'];
   $contact=$_POST['contact'];
 	$password=$_POST['password'];
   $cpassword=$_POST['cpassword'];
-  if($password==$cpassword){
-  	$query="insert into patreg(fname,lname,gender,email,contact,password,cpassword) values ('$fname','$lname','$gender','$email','$contact','$password','$cpassword');";
+
+  if($password == $cpassword){
+  	$query = "insert into patreg(fname,lname,gender,email,age,address,city,contact,password,cpassword) 
+    values ('$fname','$lname','$gender','$email','$age','$address','$city','$contact','$password','$cpassword')";
+    
     $result=mysqli_query($con,$query);
     if($result){
         $_SESSION['username'] = $_POST['fname']." ".$_POST['lname'];
         $_SESSION['fname'] = $_POST['fname'];
         $_SESSION['lname'] = $_POST['lname'];
         $_SESSION['gender'] = $_POST['gender'];
-        $_SESSION['contact'] = $_POST['contact'];
         $_SESSION['email'] = $_POST['email'];
+        $_SESSION['age'] = $_POST['age'];
+        $_SESSION['address'] = $_POST['address'];
+        $_SESSION['city'] = $_POST['city'];
+        $_SESSION['contact'] = $_POST['contact'];
+        
         header("Location:admin-panel.php");
     } 
-
+ 
     $query1 = "select * from patreg;";
-    $result1 = mysqli_query($con,$query1);
+    $result1 = mysqli_query($con, $query1);
+
     if($result1){
       $_SESSION['pid'] = $row['pid'];
     }
-
   }
+
   else{
     header("Location:error1.php");
   }
 }
+
 if(isset($_POST['update_data']))
 {
 	$contact=$_POST['contact'];

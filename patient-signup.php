@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,76 +48,87 @@ function checklen()
   		<!-- Insert Operation --> 
 <?php 
 
-include 'dbcon.php';
+// if(isset($_POST["submit"])) {
+//          $name =  mysqli_real_escape_string($con, $_POST['name']);
+//          $last_name = mysqli_real_escape_string($con, $_POST['last_name']);
+//          $email = mysqli_real_escape_string($con, $_POST['email']);
+//          $phone = mysqli_real_escape_string($con, $_POST['phone']);
+//          $age = mysqli_real_escape_string($con, $_POST['age']);
+//          $address = mysqli_real_escape_string($con, $_POST['address']);
+//          $password = mysqli_real_escape_string($con, $_POST['password']);
+//          $password2 = mysqli_real_escape_string($con, $_POST['password2']);
+//          $gender = mysqli_real_escape_string($con, $_POST['gender']);
 
-if(isset($_POST["submit"])) {
-         $name =  mysqli_real_escape_string($con, $_POST['name']);
-         $last_name = mysqli_real_escape_string($con, $_POST['last_name']);
-         $email = mysqli_real_escape_string($con, $_POST['email']);
-         $phone = mysqli_real_escape_string($con, $_POST['phone']);
-         $age = mysqli_real_escape_string($con, $_POST['age']);
-         $address = mysqli_real_escape_string($con, $_POST['address']);
-         $password = mysqli_real_escape_string($con, $_POST['password']);
-         $password2 = mysqli_real_escape_string($con, $_POST['password2']);
+//          $pass = password_hash($password, PASSWORD_BCRYPT);
+//          $pass2 = password_hash($password2, PASSWORD_BCRYPT);
 
-         $pass = password_hash($password, PASSWORD_BCRYPT);
-         $pass2 = password_hash($password2, PASSWORD_BCRYPT);
+//          $emailquery = "select * from patients where email = '$email' ";
+//          $query = mysqli_query($con, $emailquery);
 
-         $emailquery = "select * from patients where email='$email' ";
-         $query = mysqli_query($con, $emailquery);
+//          $emailcount = mysqli_num_rows($query);
 
-         $emailcount = mysqli_num_rows($query);
+//          if($emailcount>0){
+//            echo "Email already exists";
+//          } 
+//          else {
 
-         if($emailcount>0){
-           echo "Email already exists";
-         } else{
-           $insertquery = "insert into patients(`name`, `last_name`, `email`, `phone`, 
-           `age`, `address`, `password`, `password2`) 
-            values('$name','$last_name','$email','$phone','$age','$address','$pass','$pass2')";
-          $iquery = mysqli_query($con, $insertquery);
-?> 
-<?php
-            if($iquery){
-             ?>
-              <script>
-                alert("Registered Successfully!");
-              </script>
-             <?php
-            }
-        }
-}
+//             $insertquery = "insert into patients(`name`, `last_name`, `email`, `phone`, 
+//            `age`, `address`, `password`, `password2`,`gender`) 
+//             values('$name','$last_name','$email','$phone','$age','$address','$pass','$pass2','$gender')";
+         
+//             $iquery = mysqli_query($con, $insertquery);
+
+
+//             if(!$iquery){
+//              echo mysqli_error($con);
+//             }
+//              else{
+//               echo '<script>
+//                alert("Registered Successfully!");
+//                window.location="http://localhost/DokTalk/patient-login.php";
+//               </script>';
+             
+//              }
+//           }         
+             
+// }
+
+
 ?>
 
             <div class="container">
                 <div class="doktalk col-3">
-                    <a href="/"><img src="assets/img/doktalk-logo.svg" class="doktalk-logo" alt="logo"></a> 
+                    <a href="index.php"><img src="assets/img/doktalk-logo.svg" class="doktalk-logo" alt="logo"></a> 
                   </div>
                     <h2 class="form-title">Sign up</h2>
                     <div class="row">
                         <div class="col-md-8 text-left text-md-left">
                           
-                            <form method="POST" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" class="register-form" id="register-form">
+                            <form method="POST" action="func2.php" class="register-form" id="register-form">
                           
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="First Name" onkeydown="return alphaOnly(event);" required="" />
+                                    <input type="text" class="form-control" name="fname" id="fname" placeholder="First Name" onkeydown="return alphaOnly(event);" required="" />
                               
-                                    <input type="text" class="form-control" name="last_name" id="last_name" onkeydown="return alphaOnly(event);" placeholder="Last Name" />  
+                                    <input type="text" class="form-control" name="lname" id="lname" onkeydown="return alphaOnly(event);" placeholder="Last Name" />  
                               
                                     <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"  />
                          
-                                    <input type="tel" class="form-control" name="phone" id="phone" minlength="10" maxlength="10" 
+                                    <input type="tel" class="form-control" name="contact" minlength="10" maxlength="10" 
                                     placeholder="Your Phone Number" required="" />
                              
 	                                  <input type="number" class="form-control" name="age" id="age" min="0" max="100" 
-                                    placeholder="Your Age" />
+                                    placeholder="Your Age" /> 
 
                                     <input type="text" class="form-control" name="address" id="address" 
-                                    placeholder="Your address"/>                             
+                                    placeholder="Your address"/>                     
+
+                                    <input type="text" class="form-control" name="city" id="city" 
+                                    placeholder="City"/> 
 
                                     <input type="password" class="form-control" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" 
                                     title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" 
                                     onkeyup='check();' placeholder="Password" required="" /> 
 
-                                    <input type="password" class="form-control" name="password2" id="password2" placeholder="Repeat your password" onkeyup="check();" required=""/>
+                                    <input type="password" class="form-control" name="cpassword" id="cpassword" placeholder="Repeat your password" onkeyup="check();" required=""/>
                                     <span id='message'></span>
 
                                     <div class="col showPassword">
@@ -131,14 +138,14 @@ if(isset($_POST["submit"])) {
 
                                     <div class="col d-inline-block">
                                         Gender:
-                                        <input type="radio" id="male" name="male" value="male" checked/>
+                                        <input type="radio" id="male" name="gender" value="Male" checked/>
                                         <label for="male">Male</label>
-                                        <input type="radio" id="female" name="female" value="female"/>
+                                        <input type="radio" id="female" name="gender" value="Female"/>
                                         <label for="female">Female</label>      
                                     </div>
                                     
                                   <div class="col-8">
-                                    <a href="#"><button type="submit" name="submit" class="btn-signup btn-primary btn-block onclick="return checklen();" >Register</button></a>
+                                   <button type="submit" name="patsub1" class="btn-signup btn-primary btn-block onclick='return checklen();' " >Register</button>
                                   </div>
 
                                   <div class="col-6 login-link"> 
@@ -158,13 +165,13 @@ if(isset($_POST["submit"])) {
             <script>
                 function showPassword() {
                   var x = document.getElementById("password");
-                  var y = document.getElementById("password2");
+                  var y = document.getElementById("cpassword");
                   if (x.type === "password") {
                     x.type = "text";
                   } else {
                     x.type = "password";
                   }
-                  if (y.type === "password2") {
+                  if (y.type === "cpassword") {
                     y.type = "text";
                   } else {
                   y.type = "password";

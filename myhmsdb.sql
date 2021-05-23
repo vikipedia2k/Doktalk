@@ -148,6 +148,9 @@ CREATE TABLE `patreg` (
   `lname` varchar(20) NOT NULL,
   `gender` varchar(10) NOT NULL,
   `email` varchar(30) NOT NULL,
+  `age` varchar(10) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `city` varchar(40) NOT NULL,
   `contact` varchar(10) NOT NULL,
   `password` varchar(30) NOT NULL,
   `cpassword` varchar(30) NOT NULL
@@ -157,7 +160,7 @@ CREATE TABLE `patreg` (
 -- Dumping data for table `patreg`
 --
 
-INSERT INTO `patreg` (`pid`, `fname`, `lname`, `gender`, `email`, `contact`, `password`, `cpassword`) VALUES
+INSERT INTO `patreg` (`pid`, `fname`, `lname`, `gender`, `email`, `age`, `address`, `city`, `contact`, `password`, `cpassword`) VALUES
 (1, 'Ram', 'Kumar', 'Male', 'ram@gmail.com', '9876543210', 'ram123', 'ram123'),
 (2, 'Alia', 'Bhatt', 'Female', 'alia@gmail.com', '8976897689', 'alia123', 'alia123'),
 (3, 'Shahrukh', 'khan', 'Male', 'shahrukh@gmail.com', '8976898463', 'shahrukh123', 'shahrukh123'),

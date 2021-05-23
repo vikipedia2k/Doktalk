@@ -4,15 +4,16 @@ include('func.php');
 include('newfunc.php');
 $con=mysqli_connect("localhost","root","","myhmsdb");
 
-
   $pid = $_SESSION['pid'];
   $username = $_SESSION['username'];
   $email = $_SESSION['email'];
   $fname = $_SESSION['fname'];
   $gender = $_SESSION['gender'];
+  $age = $_SESSION['age'];
+  $address = $_SESSION['address'];  
+  $city = $_SESSION['city'];
   $lname = $_SESSION['lname'];
   $contact = $_SESSION['contact'];
-
 
 
 if(isset($_POST['app-submit']))
@@ -160,16 +161,10 @@ function get_specs(){
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Bootstrap CSS -->
     
         <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
-
-    
-  
-    
-    
-
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
@@ -177,16 +172,16 @@ function get_specs(){
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-  <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Global Hospital </a>
+        
+  <!-- <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Global Hospital </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button>
+  </button> -->
 
   <style >
-    .bg-primary {
+    /* .bg-primary {
     background: -webkit-linear-gradient(left, #3931af, #00c6ff);
-}
+} */
 .list-group-item.active {
     z-index: 2;
     color: #fff;
@@ -200,28 +195,96 @@ function get_specs(){
 .btn-primary{
   background-color: #3c50c1;
   border-color: #3c50c1;
+  border-radius: 1.25rem;
 }
   </style>
-
+<!-- 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
      <ul class="navbar-nav mr-auto">
        <li class="nav-item">
-        <a class="nav-link" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+        <a class="nav-link" href="patient-login.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
       </li>
        <li class="nav-item">
         <a class="nav-link" href="#"></a>
       </li>
     </ul>
   </div>
-</nav>
+</nav>-->
+
   </head>
+
   <style type="text/css">
     button:hover{cursor:pointer;}
     #inputbtn:hover{cursor:pointer;}
   </style>
-  <body style="padding-top:50px;">
-  
-   <div class="container-fluid" style="margin-top:50px;">
+
+  <body>
+
+  <!--############### Navbar Start ######################## -->
+ <nav class="navbar navbar fixed-top navbar-expand-sm navbar-light bg-light">
+        <div class="container">
+            <a href="#" class="navbar-brand mb-0 h1">
+                <img class="logo" src="assets/img/doktalk-logo.svg" alt="doktalk-logo" />
+            </a>
+            <!-- <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#consult" class="nav-link">
+                            Consult
+                        </a>
+                    </li>
+                     <li class="nav-item active">
+                        <a href="#pharmacy" class="nav-link">
+                            Pharmacy
+                        </a>
+                    </li> 
+                    <li class="nav-item dropdown">
+                        <a href="#for-doctors" class="nav-link 
+                    dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            For Doctors
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a href="doctor-login.php" class="dropdown-item">Login</a></li>
+                            <li><a href="doctor-signup.php" class="dropdown-item">Sign up</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#blog" class="nav-link">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#about" class="nav-link" onclick="myFunction()">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#contact" class="nav-link">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div> -->
+            <form class="d-flex">
+                <a href="patient-login.php"><button type="button" class="btn
+                btn-primary ">Logout</button></a>
+            </form>
+        </div>
+    </nav>
+
+    <!--############### Navbar End ######################## -->
+
+   <div class="container-fluid" style="margin-top:130px;">
     <h3 style = "margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Welcome &nbsp<?php echo $username ?> 
    </h3>
     <div class="row">

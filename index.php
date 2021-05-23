@@ -19,7 +19,6 @@
     <title>DokTalk - Consult Doctor Online</title>
 
 
-
 <script>
     var check = function() {
   if (document.getElementById('password').value ==
@@ -448,12 +447,15 @@ function checklen()
                             <strong>Contact us</strong>
                         </p>
                         <div class="form-outline form-dark mb-4">
-                            <form>
-                            <input type="text" id="name" name="name" class="form-control" placeholder="Your name" />
-                            <input type="email" id="email" name="email" class="form-control" placeholder="Your email" required/>
-                            <textarea cols="12" rows="3" id="message" class="form-control"
+                            <form method="POST" action="contact.php">
+                            <input type="text" name="txtName" class="form-control" placeholder="Your Name" value="" onkeydown="return alphaOnly(event);" required/>
+                            <input type="email" name="txtEmail" class="form-control" placeholder="Your Email" value="" required />
+                            <input type="tel" name="txtPhone" class="form-control" placeholder="Your Phone Number" value="" minlength="10" maxlength="10" required />
+                            
+                            <textarea name="txtMsg" cols="12" rows="3" id="message" class="form-control"
                                 placeholder="Message"></textarea><br>
-                            <a href=""><button type="submit" class="footer-submit btn btn-primary btn-sm">
+
+                            <a href=""><button type="submit" name="btnSubmit" class="footer-submit btn btn-primary btn-sm">
                                 Submit</button></a> 
                             </form>
                         </div>

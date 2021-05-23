@@ -1,3 +1,44 @@
+<?php
+session_start();
+?>
+
+
+<!-- // include 'dbcon.php';
+
+// if(isset($_POST['login'])) {
+//          $email =   $_POST['email'];
+//          $password =  $_POST['password'];
+
+//         $email_check = "select * from patients where email = '$email' ";
+//         $query = mysqli_query($con, $email_check);
+        
+//         $email_count = mysqli_num_rows($query);
+
+//         if($email_count){
+//           $email_pass = mysqli_fetch_array($query);
+//           $db_pass = $email_pass['password'];
+
+//           $pass_decode = password_verify($password, $db_pass); -->
+
+<!--           if($pass_decode){
+            echo '<script>
+               window.location="http://localhost/DokTalk/patient-dashboard.php";
+                </script>'; -->
+                
+<!-- //           }
+//           else
+//            {
+//             echo "Passwrod Incorrect!";
+//            }
+//           }
+//           else
+//           {
+//           echo "Invalid Email";
+//         }
+      
+//   } -->
+               
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -50,11 +91,11 @@
     </style> -->
  </head>
 <body> 
- <form action="patient-login.php" method="POST">
+<form method="POST" action="func.php" class="register-form" id="login-form">
     <section class="sign-in">
       <div class="container">
         <div class="row doktalk col-md-6">
-         <a href="/"> <img src="assets/img/doktalk-logo.svg" class="doktalk-logo" alt="logo"> </a> 
+         <a href="index.php"> <img src="assets/img/doktalk-logo.svg" class="doktalk-logo" alt="logo"> </a> 
         </div>
         <div class="signin-content">
           
@@ -64,21 +105,20 @@
   
           <div class="signin-form">
             <h2 class="form-title">Login</h2>
-            <form method="POST" class="register-form" id="login-form">
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Your Email" required="" />
+                <input type="email" name="email" placeholder="Your Email" required="" />
               </div>
               <div class="form-group">
                 <label for="your_pass">Password</label>
-                <input type="password" name="password" id="password" placeholder="Password" required="" />
+                <input type="password" name="password2" placeholder="Password" required="" />
               </div>
               <div class="form-group">
                 <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
                 <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
               </div>
               <div class="form-group form-button">
-                <button type="submit" class="btn-submit btn-primary btn-sm btn-block">Login</button>
+                <button type="submit" name="patsub" class="btn-submit btn-primary btn-sm btn-block" value="Login">Login</button>
               </div>
             </form>
             <a href='patient-signup.php' class="signup-link">Don't have an account?</a>

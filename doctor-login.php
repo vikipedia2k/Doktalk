@@ -1,3 +1,46 @@
+
+<?php
+session_start();
+?>
+
+<?php
+include 'dbcon.php';
+
+if(isset($_POST['login'])) {
+         $d_email =   $_POST['d_email'];
+         $d_password =  $_POST['d_password'];
+
+        $email_check = "SELECT * FROM `doctors` WHERE d_email = '$d_email' ";
+        $query = mysqli_query($con, $email_check);
+        
+        $email_count = mysqli_num_rows($query);
+
+        if($email_count){
+          $email_pass = mysqli_fetch_array($query);
+          $db_pass = $email_pass['d_password'];
+
+          $pass_decode = password_verify($d_password, $db_pass);
+
+          if($pass_decode){
+            echo '<script>
+                window.location="http://localhost/DokTalk/doctor-dashboard.php";
+                </script>';
+                
+          }
+          else
+           {
+            echo "Passwrod Incorrect!";
+           }
+          }
+          else
+          {
+          echo "Invalid Email";
+        }
+      
+  }
+              
+?>    
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -10,7 +53,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="assets/css/login.css">
     
     <title>Login</title>
     <!-- <style>
@@ -50,38 +93,37 @@
     </style> -->
  </head>
 <body> 
-  <form action="assets/doctor-login.php" method="POST">
+  <form action="func1.php" method="POST">
     <section class="sign-in">
       <div class="container">
         <div class="row doktalk col-md-6">
-         <a href="/"> <img src="img/doktalk-logo.svg" class="doktalk-logo" alt="logo"> </a> 
+         <a href="index.php"> <img src="assets/img/doktalk-logo.svg" class="doktalk-logo" alt="logo"> </a> 
         </div>
         <div class="signin-content">
           
           <div class="signin-image">
-            <figure><img src="img/signin-image.jpg" alt="singin image"></figure>
+            <figure><img src="assets/img/signin-image.jpg" alt="singin image"></figure>
           </div>
   
           <div class="signin-form">
             <h2 class="form-title">Login as a Doctor</h2>
-            <form method="POST" class="register-form" id="login-form">
               <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Your Email" required="" />
+                <label for="email">Username</label>
+                <input type="text" name="username3" placeholder="Username" required="" />
               </div>
               <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Password" required="" />
+                <input type="password" name="password3" placeholder="Password" required="" />
               </div>
               <div class="form-group">
                 <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
                 <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
               </div>
               <div class="form-group form-button">
-                <button type="submit" class="btn-submit btn-primary btn-sm btn-block">Login</button>
+                <button type="submit" name="docsub1" value="Login" class="btn-submit btn-primary btn-sm btn-block">Login</button>
               </div>
-            </form>
-            <a href="assets/doctor-signup.php" class="signup-link">Don't have an account?</a>
+           
+            <a href="doctor-signup.php" class="signup-link">Don't have an account?</a>
             <div class="social-login">
               <span class="social-label">Or login with</span>
               <ul class="socials">

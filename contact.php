@@ -14,7 +14,7 @@ if(isset($_POST['btnSubmit']))
     {
     	echo '<script type="text/javascript">'; 
 		echo 'alert("Message sent successfully!");'; 
-		echo 'window.location.href = "contact.html";';
+		echo 'window.location.href = "index.php";';
 		echo '</script>';
     }
 }

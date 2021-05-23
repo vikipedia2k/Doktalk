@@ -333,6 +333,9 @@ if(isset($_POST['docsub1']))
                       $lname = $row['lname'];
                       $gender = $row['gender'];
                       $email = $row['email'];
+                      $age= $row['age'];
+                      $address= $row['address'];
+                      $city= $row['city'];
                       $contact = $row['contact'];
                       $password = $row['password'];
                       
@@ -342,6 +345,9 @@ if(isset($_POST['docsub1']))
                         <td>$lname</td>
                         <td>$gender</td>
                         <td>$email</td>
+                        <td>$age</td>
+                        <td>$address</td>
+                        <td>$city</td>
                         <td>$contact</td>
                         <td>$password</td>
                       </tr>";

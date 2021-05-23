@@ -1,6 +1,6 @@
 <?php
 session_start();
-$con=mysqli_connect("localhost","root","","doktalk");
+$con=mysqli_connect("localhost","root","","myhmsdb");
 if(isset($_POST['patsub'])){
 	$email=$_POST['email'];
 	$password=$_POST['password2'];
@@ -21,7 +21,7 @@ if(isset($_POST['patsub'])){
 	}
   else {
     echo("<script>alert('Invalid Username or Password. Try Again!');
-          window.location.href = 'index1.php';</script>");
+          window.location.href = 'patient-login.php';</script>");
     // header("Location:error.php");
   }
 		
