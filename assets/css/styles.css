@@ -2683,9 +2683,8 @@ a.text-light:hover {
 }
 
 .bg-primary {
-  background: #007AFF !important;
-  color: #ffffff;
-}
+  background-color: #007AFF;
+  color: #fff;
 
 .bg-light-primary {
   background: #3395ff !important;
@@ -2693,9 +2692,8 @@ a.text-light:hover {
 }
 
 .bg-dark-primary {
-  background: #0062cc !important;
-  color: #ffffff;
-}
+  background-color: #007AFF;
+  color: #fff;
 
 .bg-success {
   background: #5cb85c !important;
