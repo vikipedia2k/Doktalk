@@ -66,20 +66,6 @@ CREATE TABLE `appointmenttb` (
 -- Dumping data for table `appointmenttb`
 --
 
-INSERT INTO `appointmenttb` (`pid`, `ID`, `fname`, `lname`, `gender`, `email`, `contact`, `doctor`, `docFees`, `appdate`, `apptime`, `userStatus`, `doctorStatus`) VALUES
-(4, 1, 'Kishan', 'Lal', 'Male', 'kishansmart0@gmail.com', '8838489464', 'Ganesh', 550, '2020-02-14', '10:00:00', 1, 0),
-(4, 2, 'Kishan', 'Lal', 'Male', 'kishansmart0@gmail.com', '8838489464', 'Dinesh', 700, '2020-02-28', '10:00:00', 0, 1),
-(4, 3, 'Kishan', 'Lal', 'Male', 'kishansmart0@gmail.com', '8838489464', 'Amit', 1000, '2020-02-19', '03:00:00', 0, 1),
-(11, 4, 'Shraddha', 'Kapoor', 'Female', 'shraddha@gmail.com', '9768946252', 'ashok', 500, '2020-02-29', '20:00:00', 1, 1),
-(4, 5, 'Kishan', 'Lal', 'Male', 'kishansmart0@gmail.com', '8838489464', 'Dinesh', 700, '2020-02-28', '12:00:00', 1, 1),
-(4, 6, 'Kishan', 'Lal', 'Male', 'kishansmart0@gmail.com', '8838489464', 'Ganesh', 550, '2020-02-26', '15:00:00', 0, 1),
-(2, 8, 'Alia', 'Bhatt', 'Female', 'alia@gmail.com', '8976897689', 'Ganesh', 550, '2020-03-21', '10:00:00', 1, 1),
-(5, 9, 'Gautam', 'Shankararam', 'Male', 'gautam@gmail.com', '9070897653', 'Ganesh', 550, '2020-03-19', '20:00:00', 1, 0),
-(4, 10, 'Kishan', 'Lal', 'Male', 'kishansmart0@gmail.com', '8838489464', 'Ganesh', 550, '0000-00-00', '14:00:00', 1, 0),
-(4, 11, 'Kishan', 'Lal', 'Male', 'kishansmart0@gmail.com', '8838489464', 'Dinesh', 700, '2020-03-27', '15:00:00', 1, 1),
-(9, 12, 'William', 'Blake', 'Male', 'william@gmail.com', '8683619153', 'Kumar', 800, '2020-03-26', '12:00:00', 1, 1),
-(9, 13, 'William', 'Blake', 'Male', 'william@gmail.com', '8683619153', 'Tiwary', 450, '2020-03-26', '14:00:00', 1, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -118,6 +104,10 @@ CREATE TABLE `doctb` (
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
+  `city` varchar(50) NOT NULL,
+  `pincode` varchar(6) NOT NULL,
+  `location` varchar(50) NOT NULL,
+  `experience` varchar(50) NOT NULL,
   `spec` varchar(50) NOT NULL,
   `docFees` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -125,16 +115,6 @@ CREATE TABLE `doctb` (
 --
 -- Dumping data for table `doctb`
 --
-
-INSERT INTO `doctb` (`username`, `password`, `email`, `spec`, `docFees`) VALUES
-('ashok', 'ashok123', 'ashok@gmail.com', 'General', 500),
-('arun', 'arun123', 'arun@gmail.com', 'Cardiologist', 600),
-('Dinesh', 'dinesh123', 'dinesh@gmail.com', 'General', 700),
-('Ganesh', 'ganesh123', 'ganesh@gmail.com', 'Pediatrician', 550),
-('Kumar', 'kumar123', 'kumar@gmail.com', 'Pediatrician', 800),
-('Amit', 'amit123', 'amit@gmail.com', 'Cardiologist', 1000),
-('Abbis', 'abbis123', 'abbis@gmail.com', 'Neurologist', 1500),
-('Tiwary', 'tiwary123', 'tiwary@gmail.com', 'Pediatrician', 450);
 
 -- --------------------------------------------------------
 
@@ -159,19 +139,6 @@ CREATE TABLE `patreg` (
 --
 -- Dumping data for table `patreg`
 --
-
-INSERT INTO `patreg` (`pid`, `fname`, `lname`, `gender`, `email`, `age`, `address`, `city`, `contact`, `password`, `cpassword`) VALUES
-(1, 'Ram', 'Kumar', 'Male', 'ram@gmail.com', '9876543210', 'ram123', 'ram123'),
-(2, 'Alia', 'Bhatt', 'Female', 'alia@gmail.com', '8976897689', 'alia123', 'alia123'),
-(3, 'Shahrukh', 'khan', 'Male', 'shahrukh@gmail.com', '8976898463', 'shahrukh123', 'shahrukh123'),
-(4, 'Kishan', 'Lal', 'Male', 'kishansmart0@gmail.com', '8838489464', 'kishan123', 'kishan123'),
-(5, 'Gautam', 'Shankararam', 'Male', 'gautam@gmail.com', '9070897653', 'gautam123', 'gautam123'),
-(6, 'Sushant', 'Singh', 'Male', 'sushant@gmail.com', '9059986865', 'sushant123', 'sushant123'),
-(7, 'Nancy', 'Deborah', 'Female', 'nancy@gmail.com', '9128972454', 'nancy123', 'nancy123'),
-(8, 'Kenny', 'Sebastian', 'Male', 'kenny@gmail.com', '9809879868', 'kenny123', 'kenny123'),
-(9, 'William', 'Blake', 'Male', 'william@gmail.com', '8683619153', 'william123', 'william123'),
-(10, 'Peter', 'Norvig', 'Male', 'peter@gmail.com', '9609362815', 'peter123', 'peter123'),
-(11, 'Shraddha', 'Kapoor', 'Female', 'shraddha@gmail.com', '9768946252', 'shraddha123', 'shraddha123');
 
 -- --------------------------------------------------------
 

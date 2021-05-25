@@ -1,45 +1,4 @@
 
-<?php
-session_start();
-?>
-
-<?php
-include 'dbcon.php';
-
-if(isset($_POST['login'])) {
-         $d_email =   $_POST['d_email'];
-         $d_password =  $_POST['d_password'];
-
-        $email_check = "SELECT * FROM `doctors` WHERE d_email = '$d_email' ";
-        $query = mysqli_query($con, $email_check);
-        
-        $email_count = mysqli_num_rows($query);
-
-        if($email_count){
-          $email_pass = mysqli_fetch_array($query);
-          $db_pass = $email_pass['d_password'];
-
-          $pass_decode = password_verify($d_password, $db_pass);
-
-          if($pass_decode){
-            echo '<script>
-                window.location="http://localhost/DokTalk/doctor-dashboard.php";
-                </script>';
-                
-          }
-          else
-           {
-            echo "Passwrod Incorrect!";
-           }
-          }
-          else
-          {
-          echo "Invalid Email";
-        }
-      
-  }
-              
-?>    
 
 <!DOCTYPE html>
 <html lang="en">

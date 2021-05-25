@@ -2,7 +2,7 @@
 $server = "localhost";
 $user = "root";
 $password = "";
-$db =  "doktalk";
+$db =  "myhmsdb";
 
 $con = mysqli_connect($server,$user,$password,$db);
 
