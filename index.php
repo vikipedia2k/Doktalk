@@ -126,7 +126,7 @@ function checklen()
                     <h1>We are here</h1>
                     <h1>for your care.</h1>
                     <h5>Stay Home. Consult Doctors Online.</h5>
-                    <a href="assets/book-appointment.html"><button class="button">Book Appointment</button></a>
+                    <a href="book-appointment.php"><button class="button">Book Appointment</button></a>
                 </div>
             </div>
         </div>
@@ -145,8 +145,8 @@ function checklen()
             <div class="container">
                 <div class="row my-3">
                     <div class="col-md-9">
-                        <h2>Top Departments</h2>
-                        <p>Private online consultations with doctors in all departments</p>
+                        <h2>Top Specializations</h2>
+                        <p>Private online consultations with doctors in all specializations</p>
                     </div>
                     <div class="col-md-3">
                         <a href="assets/departments.html"><button type="button" class="btn btn-primary btn-sm" alt="view-all">View
@@ -294,7 +294,7 @@ function checklen()
             </div>
             <div class="row mb-5">
                 <div class=" col-md-3">
-                    <div class="card1 row g-0 overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="card1 row g-0 overflow-hidden flex-md-row mb-4 h-md-250 position-relative" style="box-shadow:0px 0px 3px gray;">
                         <div class="col">
                             <img src="assets/img/caregiver.svg" alt="post-img">
     
@@ -310,7 +310,7 @@ function checklen()
                 </div>
     
                 <div class="col-md-3">
-                    <div class="card2 row g-0 overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="card2 row g-0 overflow-hidden flex-md-row mb-4 h-md-250 position-relative" style="box-shadow:0px 0px 3px gray;">
                         <div class="col">
                             <img src="assets/img/summer-hot-weather.svg" alt="">
                         </div>
@@ -325,7 +325,7 @@ function checklen()
                 </div>
     
                 <div class="col-md-3">
-                    <div class="card3 row g-0 overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="card3 row g-0 overflow-hidden flex-md-row mb-4 h-md-250 position-relative" style="box-shadow:0px 0px 3px gray;">
                         <div class="col">
                             <img src="assets/img/coffee.svg" alt="">
                         </div>
@@ -340,7 +340,7 @@ function checklen()
                 </div>
     
                 <div class="col-md-3">
-                    <div class="card4 row g-0 overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="card4 row g-0 overflow-hidden flex-md-row mb-4 h-md-250 position-relative" style="box-shadow:0px 0px 3px gray;">
                         <div class="col">
                             <img src="assets/img/coconut.svg" alt="">
     
@@ -464,7 +464,7 @@ function checklen()
         </section>
     </div>
     <!-- Copyright -->
-    <div class="copyright text-center text-white p-3" style="background-color: #0d6efd;">
+    <div class="copyright-index text-center text-white p-3" style="background-color: #314BF6; font-size:14px;">
         Copyright © 2021, DokTalk. All rights reserved. | Made with &#x1f9e1; by Group 8
     </div>
     <!-- Copyright -->

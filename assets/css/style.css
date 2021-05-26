@@ -38,6 +38,7 @@ html{
     padding-bottom: .5rem;
 } 
 
+
 .navbar-light .navbar-nav .nav-link {
     color: rgba(0, 0, 0);
 }
@@ -288,6 +289,7 @@ font-size: 18px;
 
 
 /* ############# footer start ################ */
+
 .dolktalk-footer-logo{
     padding-left: 80px;
 }
@@ -328,8 +330,10 @@ font-size: 18px;
     padding: 1rem;
 }
 
-.copyright{
-   font-size: 14px;
+.copyright-index{
+   font-size: 13px;
+   left: 0;
+   bottom: 0;
   }
 /* ################### footer end ########################*/
 

@@ -12,7 +12,7 @@
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="css/book-appointment.css">
+    <link rel="stylesheet" href="assets/css/book-appointment.css">
 
 </head>
 
@@ -20,7 +20,7 @@
     <section class="book-appointment" id="book-appointment">
         <div class="container">
             <div class="doktalk col-md-12">
-                <a href="/"><img src="img/doktalk-logo.svg" class="doktalk-logo" alt="logo"></a> 
+                <a href="index.php"><img src="assets/img/doktalk-logo.svg" class="doktalk-logo" alt="logo"></a> 
             </div>
             <form>
                 <div class="content-body">
@@ -147,7 +147,7 @@
                                                 <!-- <button type="submit" class="btn-cancel btn-danger btn-sm">Cancel</button> -->
                                             </div>
                                             <div class="col-md-4 book-img">
-                                                <img src="img/book-appointment.svg" alt="book-appointment-img">
+                                                <img src="assets/img/book-appointment.svg" alt="book-appointment-img">
                                             </div>
                                         </div>  
                                 </div> 

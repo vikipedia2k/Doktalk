@@ -14,8 +14,11 @@ if(isset($_POST['patsub'])){
       $_SESSION['fname'] = $row['fname'];
       $_SESSION['lname'] = $row['lname'];
       $_SESSION['gender'] = $row['gender'];
-      $_SESSION['contact'] = $row['contact'];
       $_SESSION['email'] = $row['email'];
+      $_SESSION['age'] = $row['age'];
+      $_SESSION['adress'] = $row['address'];
+      $_SESSION['city'] = $row['city'];
+      $_SESSION['contact'] = $row['contact'];
     }
 		header("Location:admin-panel.php");
 	}
