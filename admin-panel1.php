@@ -9,9 +9,13 @@ if(isset($_POST['docsub']))
   $doctor=$_POST['doctor'];
   $dpassword=$_POST['dpassword'];
   $demail=$_POST['demail'];
+  $dcity=$_POST['dcity'];
+  $dpincode=$_POST['dpincode'];
+  $dlocation=$_POST['dlocation'];
+  $dexperience=$_POST['dexperience'];
   $spec=$_POST['special'];
   $docFees=$_POST['docFees'];
-  $query="insert into doctb(username,password,email,spec,docFees)values('$doctor','$dpassword','$demail','$spec','$docFees')";
+  $query="insert into doctb(username,password,email,city,pincode,location,experience,spec,docFees)values('$doctor', '$dpassword','$demail','$dcity','$dpincode','$dlocation','$dexperience','$spec','$docFees')";
   $result=mysqli_query($con,$query);
   if($result)
     {
@@ -269,6 +273,10 @@ if(isset($_POST['docsub1']))
                     <th scope="col">Doctor Name</th>
                     <th scope="col">Specialization</th>
                     <th scope="col">Email</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Pincode</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Experience</th>
                     <th scope="col">Password</th>
                     <th scope="col">Fees</th>
                   </tr>
@@ -283,6 +291,10 @@ if(isset($_POST['docsub1']))
                       $username = $row['username'];
                       $spec = $row['spec'];
                       $email = $row['email'];
+                      $city = $row['city'];
+                      $pincode = $row['pincode'];
+                      $location = $row['location'];
+                      $experience = $row['experience'];
                       $password = $row['password'];
                       $docFees = $row['docFees'];
                       
@@ -290,6 +302,10 @@ if(isset($_POST['docsub1']))
                         <td>$username</td>
                         <td>$spec</td>
                         <td>$email</td>
+                        <td>$city</td>
+                        <td>$pincode</td>
+                        <td>$location</td>
+                        <td>$experience</td>
                         <td>$password</td>
                         <td>$docFees</td>
                       </tr>";
@@ -520,6 +536,14 @@ if(isset($_POST['docsub1']))
                     </div><br><br>
                   <div class="col-md-4"><label>Email ID:</label></div>
                   <div class="col-md-8"><input type="email"  class="form-control" name="demail" required></div><br><br>
+                  <div class="col-md-4"><label>City:</label></div>
+                  <div class="col-md-8"><input type="text" class="form-control" name="dcity"  required></div><br><br>
+                  <div class="col-md-4"><label>Pincode:</label></div>
+                  <div class="col-md-8"><input type="number" class="form-control" name="dpincode"  required></div><br><br>
+                  <div class="col-md-4"><label>Location:</label></div>
+                  <div class="col-md-8"><input type="text" class="form-control" name="dlocation"  required></div><br><br>
+                  <div class="col-md-4"><label>Experience:</label></div>
+                  <div class="col-md-8"><input type="text" class="form-control" name="dexperience" required></div><br><br>
                   <div class="col-md-4"><label>Password:</label></div>
                   <div class="col-md-8"><input type="password" class="form-control"  onkeyup='check();' name="dpassword" id="dpassword"  required></div><br><br>
                   <div class="col-md-4"><label>Confirm Password:</label></div>
