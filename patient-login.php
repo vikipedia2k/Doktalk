@@ -3,42 +3,6 @@ session_start();
 ?>
 
 
-<!-- // include 'dbcon.php';
-
-// if(isset($_POST['login'])) {
-//          $email =   $_POST['email'];
-//          $password =  $_POST['password'];
-
-//         $email_check = "select * from patients where email = '$email' ";
-//         $query = mysqli_query($con, $email_check);
-        
-//         $email_count = mysqli_num_rows($query);
-
-//         if($email_count){
-//           $email_pass = mysqli_fetch_array($query);
-//           $db_pass = $email_pass['password'];
-
-//           $pass_decode = password_verify($password, $db_pass); -->
-
-<!--           if($pass_decode){
-            echo '<script>
-               window.location="http://localhost/DokTalk/patient-dashboard.php";
-                </script>'; -->
-                
-<!-- //           }
-//           else
-//            {
-//             echo "Passwrod Incorrect!";
-//            }
-//           }
-//           else
-//           {
-//           echo "Invalid Email";
-//         }
-      
-//   } -->
-               
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -54,41 +18,7 @@ session_start();
     <link rel="stylesheet" href="assets/css/login.css">
     
     <title>Login</title>
-    <!-- <style>
-      *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-
-      }
-      body{
-        background: rgb(8, 110, 206);
-      }
-      .row{
-        background: white;
-        border-radius: 30px;
-      }
-      img{
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
-      }
-      .btn-1{
-        border: none;
-        outline: none;
-        height: 45px;
-        width: 100%;
-        background-color: black; 
-        color: white;
-        border-radius: 4px;
-        font-weight: bold;
-      }
-      .btn-1:hover{
-        background-color: white;
-        border: 1px solid;
-        color: black;
-
-      }
-    </style> -->
+    
  </head>
 <body> 
 <form method="POST" action="func.php" class="register-form" id="login-form">
