@@ -149,7 +149,7 @@ function checklen()
                         <p>Private online consultations with doctors in all specializations</p>
                     </div>
                     <div class="col-md-3">
-                        <a href="assets/departments.html"><button type="button" class="btn btn-primary btn-sm" alt="view-all">View
+                        <a href="assets/departments.php"><button type="button" class="btn btn-primary btn-sm" alt="view-all">View
                                 all</button></a>
                     </div>
                 </div>
@@ -303,7 +303,7 @@ function checklen()
                             <p class="d-inline-block mb-2 text-primary">Coronavirus Updates</p>
                             <div class="mb-1 text-muted">May 1</div>
                             <p class="card-text mb-auto">Caring for COVID-19 patients at home</p>
-                            <a href="/assets/blog1.html" class="stretched-link">Read more</a>
+                            <a href="assets/blog1.html" class="stretched-link">Read more</a>
                         </div>
     
                     </div>

@@ -66,10 +66,10 @@
                                         </div> -->
 
                                         <div class="form-group">
-                                            <label for="service">Select Department <span
+                                            <label for="service">Select Specialization <span
                                                     class="text-danger">*</span></label>
                                             <select name="Service" class="form-control" id="service" required="">
-                                                <option value="">Select Department</option>
+                                                <option value="" disabled>Select Specialization</option>
                                                 <option value="dental">General Physician</option>
                                                 <option value="body">Dietitian</option>
                                                 <option value="heart">Psychologist</option>
@@ -85,7 +85,7 @@
                                         <div class="form-group">
                                             <label for="doctor">Select Doctor <span class="text-danger">*</span></label>
                                             <select name="Doctor" class="form-control" id="doctor" required="">
-                                                <option value="">Select Doctor</option>
+                                                <option value="" disabled>Select Doctor</option>
                                                 <option value="doctor2">Dr.Sanjay Raut</option>
                                                 <option value="doctor3">Dr.Sneha Gupta </option>
                                                 <option value="doctor1">Dr.Manoj Sharma</option>
@@ -119,7 +119,7 @@
                                             </div>
 
 
-                                            <div class="form-group">
+                                            <!-- <div class="form-group">
                                                 <label for="email">Email: <span class="text-danger">*</span></label>
                                                 <input type="email" class="form-control" name="email" id="email"
                                                     placeholder="Enter Email" required="">
@@ -130,7 +130,7 @@
                                                 <input type="text" minlength="10" maxlength="10"
                                                     class="form-control" id="phone" name="phone"
                                                     placeholder="Enter Contact Number" required="">
-                                            </div>
+                                            </div> -->
 
                                             
                                                 

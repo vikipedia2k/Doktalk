@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Mar 16, 2020 at 02:34 AM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.4
+-- Host: 127.0.0.1
+-- Generation Time: May 29, 2021 at 07:33 AM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -66,6 +65,11 @@ CREATE TABLE `appointmenttb` (
 -- Dumping data for table `appointmenttb`
 --
 
+INSERT INTO `appointmenttb` (`pid`, `ID`, `fname`, `lname`, `gender`, `email`, `contact`, `doctor`, `docFees`, `appdate`, `apptime`, `userStatus`, `doctorStatus`) VALUES
+(12, 14, 'Akash', 'Sawarkar', 'Male', 'akashsawarkar@gmail.com', '9986896896', 'Sneha', 350, '2021-05-28', '14:00:00', 1, 1),
+(12, 15, 'Akash', 'Sawarkar', 'Male', 'akashsawarkar@gmail.com', '9986896896', 'Sneha', 350, '2021-05-29', '16:00:00', 1, 1),
+(12, 16, 'Akash', 'Sawarkar', 'Male', 'akashsawarkar@gmail.com', '9986896896', 'Sneha', 350, '2021-05-30', '16:00:00', 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -92,7 +96,9 @@ INSERT INTO `contact` (`name`, `email`, `contact`, `message`) VALUES
 ('Karthick', 'karthi@gmail.com', '9898989898', 'Good service'),
 ('Abbis', 'abbis@gmail.com', '8979776868', 'Love your service'),
 ('Asiq', 'asiq@gmail.com', '9087897564', 'Love your service. Thank you!'),
-('Jane', 'jane@gmail.com', '7869869757', 'I love your service!');
+('Jane', 'jane@gmail.com', '7869869757', 'I love your service!'),
+('Sunil Chauhan', 'sunils@gmail.com', '9966633355', 'Very good experience .. Thank you !'),
+('Manasi', 'manasi@gmail.com', '9998686939', 'How can I choose doctor?');
 
 -- --------------------------------------------------------
 
@@ -115,6 +121,20 @@ CREATE TABLE `doctb` (
 --
 -- Dumping data for table `doctb`
 --
+
+INSERT INTO `doctb` (`username`, `password`, `email`, `city`, `pincode`, `location`, `experience`, `spec`, `docFees`) VALUES
+('Sneha', 'Sneha123', 'sneha@gmail.com', 'Pune', '411058', 'Warje', 'MBBS, DNB', 'Neurologist', 350);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `images`
+--
+
+CREATE TABLE `images` (
+  `id` int(40) NOT NULL,
+  `image_url` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -139,6 +159,9 @@ CREATE TABLE `patreg` (
 --
 -- Dumping data for table `patreg`
 --
+
+INSERT INTO `patreg` (`pid`, `fname`, `lname`, `gender`, `email`, `age`, `address`, `city`, `contact`, `password`, `cpassword`) VALUES
+(12, 'Akash', 'Sawarkar', 'Male', 'akash12345@gmail.com', '23', 'Street 101', 'Pune', '9986896896', 'Akash123', 'Akash123');
 
 -- --------------------------------------------------------
 
@@ -167,7 +190,8 @@ INSERT INTO `prestb` (`doctor`, `pid`, `ID`, `fname`, `lname`, `appdate`, `appti
 ('Dinesh', 4, 11, 'Kishan', 'Lal', '2020-03-27', '15:00:00', 'Cough', 'Nothing', 'Just take a teaspoon of Benadryl every night'),
 ('Ganesh', 2, 8, 'Alia', 'Bhatt', '2020-03-21', '10:00:00', 'Severe Fever', 'Nothing', 'Take bed rest'),
 ('Kumar', 9, 12, 'William', 'Blake', '2020-03-26', '12:00:00', 'Sever fever', 'nothing', 'Paracetamol -> 1 every morning and night'),
-('Tiwary', 9, 13, 'William', 'Blake', '2020-03-26', '14:00:00', 'Cough', 'Skin dryness', 'Intake fruits with more water content');
+('Tiwary', 9, 13, 'William', 'Blake', '2020-03-26', '14:00:00', 'Cough', 'Skin dryness', 'Intake fruits with more water content'),
+('Sneha', 12, 14, 'Akash', 'Sawarkar', '2021-05-28', '14:00:00', 'Fever', 'n/a', 'Take medicine on time and rest');
 
 --
 -- Indexes for dumped tables
@@ -178,6 +202,12 @@ INSERT INTO `prestb` (`doctor`, `pid`, `ID`, `fname`, `lname`, `appdate`, `appti
 --
 ALTER TABLE `appointmenttb`
   ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `images`
+--
+ALTER TABLE `images`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `patreg`
@@ -193,13 +223,19 @@ ALTER TABLE `patreg`
 -- AUTO_INCREMENT for table `appointmenttb`
 --
 ALTER TABLE `appointmenttb`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `images`
+--
+ALTER TABLE `images`
+  MODIFY `id` int(40) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `patreg`
 --
 ALTER TABLE `patreg`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

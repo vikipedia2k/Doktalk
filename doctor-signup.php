@@ -174,7 +174,7 @@ if(isset($_POST["submit"])) {
                                   </div> 
                               
                                 <div class="col-4 signup-image">
-                                    <img src="assets/img/signup-image.jpg" alt="sing up image" />
+                                    <img src="assets/img/signup-image.jpg" alt="image" />
                                 </div>
                                 
                             </form>

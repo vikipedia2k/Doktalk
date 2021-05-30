@@ -175,7 +175,7 @@ function get_specs()
       color: #fff;
       background-color: #314BF6;
       border-color: #314BF6;
-      ;
+      
 
     }
 
@@ -641,6 +641,46 @@ function get_specs()
                         <form action="admin-panel.php" method="POST">
                           <div class="row">
                             <div class="col-md-6">
+
+                            <!-- profile picture upload   -->
+
+                              <form action="admin-panel.php" method="POST" enctype="multipart/form-data">
+                                <input type="file" name="image" value="" class="form-control">
+                                <button type="submit" name="upload" class="button btn-sm">Upload</button><br>
+                              </form>
+                              <?php
+                              $con = mysqli_connect("localhost", "root", "", "image");
+                            
+
+                              if(isset($_POST["upload"])){
+                                $file = $_FILES['image']['name'];
+
+                                $query = "INSERT INTO upload(image) VALUES('$file')";
+                                $res = mysqli_query($con, $query);
+
+                                if($res){
+                                  move_uploaded_file($_FILES['image']['temp_name'], "$file");
+                                }
+                              }
+                              ?>
+                              <?php        
+                              $sel = "SELECT * FROM `upload`";
+                              $que = mysqli_query($con, $sel);
+                              
+                              $output = "";
+
+                              if(mysqli_num_rows($que) < 1){
+                                $output .= "<h3>No image uploaded</h3>";
+                              }
+                              while($row = mysqli_fetch_array($que)){
+                                $output .= "<img src='".$row['image']."' class='my-3' 
+                                style='width:.300px; height:300px;'>";
+
+                              }
+                              ?>
+
+                            <!-- profile picture upload   -->
+   
                               <label for="fname" style="margin-top: 5px;">First Name</label>
                               <input type="text" class="form-control" name="fname" id="fname" placeholder="First Name" onkeydown="return alphaOnly(event);" value="<?php echo htmlentities($row['fname']); ?>" />
 
@@ -674,7 +714,7 @@ function get_specs()
                                 <small>Update your email</small></a>
 
                               <div class="col-4">
-                                <button type="submit" name="update" class="updateBtn btn-primary btn-block" style="margin-top: 2rem; margin-left: -20em; padding: 2px;">Update</button>
+                                <button type="submit" name="update" class="updateBtn btn-primary btn-block" style="margin-top: 10rem; margin-left: -20em; padding: 2px;">Update</button>
                               </div>
                             </div>
                           </div>
@@ -737,14 +777,13 @@ function get_specs()
               </div>     
 
 
-
+        </div>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.all.min.js">
-        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.all.min.js"></script>
 
 
 

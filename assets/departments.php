@@ -20,7 +20,7 @@
      <!--############### Navbar Start ######################## -->
      <nav class="navbar navbar fixed-top navbar-expand-sm navbar-light bg-light">
         <div class="container">
-            <a href="index.html" class="navbar-brand mb-0 h1">
+            <a href="index.php" class="navbar-brand mb-0 h1">
                 <img class="logo" src="img/doktalk-logo.svg" alt="doktalk-logo" />
             </a>
             <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler"
@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a href="index.html" class="nav-link">
+                        <a href="index.php" class="nav-link">
                             Home
                         </a>
                     </li>
@@ -51,8 +51,8 @@
                             For Doctors
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a href="doctor-login.html" class="dropdown-item">Login</a></li>
-                            <!--  <li><a href="#" class="dropdown-item">Sign up</a></li>   -->
+                            <li><a href="doctor-login.php" class="dropdown-item">Login</a></li>
+                             <li><a href="doctor-signup.php" class="dropdown-item">Sign up</a></li>  
                         </ul>
                     </li>
                     <li class="nav-item active">
@@ -73,7 +73,7 @@
                 </ul>
             </div>
             <form class="d-flex">
-                <a href="login.html"><button type="button" class="btn
+                <a href="patient-login.php"><button type="button" class="btn
                 btn-primary">Login | Sign up</button></a>
             </form>
         </div>
@@ -108,7 +108,7 @@
                         <div class="row">
                             <div class="col-md d-flex align-items-center">
                                 <div class="card" style="width: 14rem; ">
-                                    <img src="/img/gen-physician.svg" class="card-img-top" alt="diet">
+                                    <img src="img/gen-physician.svg" class="card-img-top" alt="diet">
                                     <div class="card-body text-center">
                                         <h5 class="card-title text-center"><a href="general-physician.html">General Physician</a></h5>
                                     </div>
@@ -116,7 +116,7 @@
             
                                 <div class="col-md d-flex align-items-center">
                                     <div class="card" style="width: 14rem; ">
-                                        <img src="/img/dietitian.svg" class="card-img-top" alt="diet">
+                                        <img src="img/dietitian.svg" class="card-img-top" alt="diet">
                                         <div class="card-body text-center">
                                             <h5 class="card-title text-center"><a href="dietitian.html">Dietitian</a></h5>
                                         </div>
@@ -124,7 +124,7 @@
             
                                     <div class="col-md d-flex align-items-center">
                                         <div class="card" style="width: 14rem;">
-                                            <img src="/img/psychologist.svg" class="card-img-top" alt="diet">
+                                            <img src="img/psychologist.svg" class="card-img-top" alt="diet">
                                             <div class="card-body text-center">
                                                 <h5 class="card-title text-center"><a href="#">Psychologist</a></h5>
                                             </div>
@@ -132,7 +132,7 @@
             
                                         <div class="col-md d-flex align-items-center">
                                             <div class="card" style="width: 14rem;">
-                                                <img src="/img/dermatologist.svg" class="card-img-top" alt="diet">
+                                                <img src="img/dermatologist.svg" class="card-img-top" alt="diet">
                                                 <div class="card-body text-center">
                                                     <h5 class="card-title text-center"><a href="#">Dermatologist</a></h5>
                                                 </div>
@@ -140,7 +140,7 @@
             
                                             <div class="col-md d-flex align-items-center">
                                                 <div class="card" style="width: 14rem;">
-                                                    <img src="/img/ayurveda.svg" class="card-img-top" alt="diet">
+                                                    <img src="img/ayurveda.svg" class="card-img-top" alt="diet">
                                                     <div class="card-body text-center">
                                                         <h5 class="card-title text-center"><a href="#">Ayurveda</a></h5>
             
@@ -156,7 +156,7 @@
                         <div class="row">
                             <div class="col-md d-flex align-items-center">
                                 <div class="card" style="width: 14rem; ">
-                                    <img src="/img/homeopathy.svg" class="card-img-top" alt="diet">
+                                    <img src="img/homeopathy.svg" class="card-img-top" alt="diet">
                                     <div class="card-body text-center">
                                         <h5 class="card-title text-center"><a href="general-physician.html">Homeopathy</a></h5>
                                     </div>
@@ -164,7 +164,7 @@
             
                                 <div class="col-md d-flex align-items-center">
                                     <div class="card" style="width: 14rem; ">
-                                        <img src="/img/pulmonologist.svg" class="card-img-top" alt="diet">
+                                        <img src="img/pulmonologist.svg" class="card-img-top" alt="diet">
                                         <div class="card-body text-center">
                                             <h5 class="card-title text-center"><a href="#">Pulmonologist</a></h5>
                                         </div>
@@ -172,7 +172,7 @@
             
                                     <div class="col-md d-flex align-items-center">
                                         <div class="card" style="width: 14rem;">
-                                            <img src="/img/orthopaedic.svg" class="card-img-top" alt="diet">
+                                            <img src="img/orthopaedic.svg" class="card-img-top" alt="diet">
                                             <div class="card-body text-center">
                                                 <h5 class="card-title text-center"><a href="#">Orthopaedic</a></h5>
                                             </div>
@@ -180,7 +180,7 @@
             
                                         <div class="col-md d-flex align-items-center">
                                             <div class="card" style="width: 14rem;">
-                                                <img src="/img/sexologist.svg" class="card-img-top" alt="diet">
+                                                <img src="img/sexologist.svg" class="card-img-top" alt="diet">
                                                 <div class="card-body text-center">
                                                     <h5 class="card-title text-center"><a href="#">Sexologist</a></h5>
                                                 </div>
@@ -188,7 +188,7 @@
             
                                             <div class="col-md d-flex align-items-center">
                                                 <div class="card" style="width: 14rem;">
-                                                    <img src="/img/opthalmologist.svg" class="card-img-top" alt="diet">
+                                                    <img src="img/opthalmologist.svg" class="card-img-top" alt="diet">
                                                     <div class="card-body text-center">
                                                         <h5 class="card-title text-center"><a href="#">Ophthalmologist </a></h5>
             
@@ -204,7 +204,7 @@
                         <div class="row">
                             <div class="col-md d-flex align-items-center">
                                 <div class="card" style="width: 14rem; ">
-                                    <img src="/img/paediatrician.svg" class="card-img-top" alt="diet">
+                                    <img src="img/paediatrician.svg" class="card-img-top" alt="diet">
                                     <div class="card-body text-center">
                                         <h5 class="card-title text-center"><a href="general-physician.html">Paediatrician</a></h5>
                                     </div>
@@ -212,7 +212,7 @@
             
                                 <div class="col-md d-flex align-items-center">
                                     <div class="card" style="width: 14rem; ">
-                                        <img src="/img/urologist.svg" class="card-img-top" alt="diet">
+                                        <img src="img/urologist.svg" class="card-img-top" alt="diet">
                                         <div class="card-body text-center">
                                             <h5 class="card-title text-center"><a href="#">Urologist</a></h5>
                                         </div>
@@ -220,7 +220,7 @@
             
                                     <div class="col-md d-flex align-items-center">
                                         <div class="card" style="width: 14rem;">
-                                            <img src="/img/dentist.svg" class="card-img-top" alt="diet">
+                                            <img src="img/dentist.svg" class="card-img-top" alt="diet">
                                             <div class="card-body text-center">
                                                 <h5 class="card-title text-center"><a href="#">Dentist</a></h5>
                                             </div>
@@ -228,7 +228,7 @@
             
                                         <div class="col-md d-flex align-items-center">
                                             <div class="card" style="width: 14rem;">
-                                                <img src="/img/trichologist.svg" class="card-img-top" alt="diet">
+                                                <img src="img/trichologist.svg" class="card-img-top" alt="diet">
                                                 <div class="card-body text-center">
                                                     <h5 class="card-title text-center"><a href="#">Trichologist </a></h5>
                                                 </div>
@@ -236,7 +236,7 @@
             
                                             <div class="col-md d-flex align-items-center">
                                                 <div class="card" style="width: 14rem;">
-                                                    <img src="/img/gynecologist.svg" class="card-img-top" alt="diet">
+                                                    <img src="img/gynecologist.svg" class="card-img-top" alt="diet">
                                                     <div class="card-body text-center">
                                                         <h5 class="card-title text-center"><a href="#">Gynecologist</a></h5>
             

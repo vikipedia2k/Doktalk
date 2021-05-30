@@ -1,4 +1,3 @@
-
 <!--############### Navbar Start ######################## -->
 <head>
     <style>
@@ -14,7 +13,7 @@
 <html lang="en">
 <nav class="navbar navbar fixed-top navbar-expand-sm navbar-light bg-light">
         <div class="container">
-            <a href="index.php" class="navbar-brand mb-0 h1">
+            <a href="index.php" class="navbar-brand mb-0 h1" style="margin-left: -7rem;">
                 <img class="logo" src="assets/img/doktalk-logo.svg" alt="doktalk-logo" />
             </a>
             <!-- <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler"
@@ -67,7 +66,7 @@
                 </ul>
             </div> -->
             <form class="d-flex">
-                <a href="patient-login.php"><button type="button" class="btn
+                <a href="doctor-login.php"><button type="button" class="btn
                 btn-primary ">Logout</button></a>
             </form>
         </div>

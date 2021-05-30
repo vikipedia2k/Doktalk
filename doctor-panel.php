@@ -41,7 +41,7 @@ if(isset($_GET['cancel']))
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
@@ -49,12 +49,13 @@ if(isset($_GET['cancel']))
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-  <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Global Hospital </a>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+      <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"> -->
+  <!-- <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Global Hospital </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button>
+  </button> -->
+
 
     <style >
       .btn-outline-light:hover{
@@ -65,21 +66,29 @@ if(isset($_GET['cancel']))
     </style>
 
   <style >
-    .bg-primary {
+    /* .bg-primary {
     background: -webkit-linear-gradient(left, #3931af, #00c6ff);
-}
+} */
 .list-group-item.active {
     z-index: 2;
     color: #fff;
-    background-color: #342ac1;
-    border-color: #007bff;
+    background-color: #314BF6;
+    border-color: #314BF6;
 }
-.text-primary {
+/* .text-primary {
     color: #342ac1!important;
-}
+} */
+.copyright {
+      width: 100%;
+      font-size: 14px;
+      position: fixed;
+      bottom: 0;
+      background-color: #314BF6;
+    }
+
   </style>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
      <ul class="navbar-nav mr-auto">
        <li class="nav-item">
         <a class="nav-link" href="doctor-login.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
@@ -93,17 +102,23 @@ if(isset($_GET['cancel']))
       <input type="submit" class="btn btn-outline-light" id="inputbtn" name="search_submit" value="Search">
     </form>
   </div>
-</nav>
+</nav> -->
   </head>
+
+ 
   <style type="text/css">
     button:hover{cursor:pointer;}
     #inputbtn:hover{cursor:pointer;}
   </style>
+
   <body style="padding-top:50px;">
-   <div class="container-fluid" style="margin-top:50px;">
-    <h3 style = "margin-left: 40%; padding-bottom: 20px;font-family:'IBM Plex Sans', sans-serif;"> Welcome &nbsp<?php echo $_SESSION['dname'] ?>  </h3>
+  <?php
+  include 'nav-bar-doc.php';
+  ?>
+   <div class="container-fluid" style="margin-top:60px;">
+    <h3 style = "margin-left: 187px; margin-top: 5rem; font-size:21px; font-family:'Poppins', sans-serif;"> Welcome <br><?php echo $_SESSION['dname'] ?>  </h3>
     <div class="row">
-  <div class="col-md-4" style="max-width:18%;margin-top: 3%;">
+  <div class="col-md-4" style="max-width:18%; margin-top: 3%; margin-left: 3rem;">
     <div class="list-group" id="list-tab" role="tablist">
       <a class="list-group-item list-group-item-action active" href="#list-dash" role="tab" aria-controls="home" data-toggle="list">Dashboard</a>
       <a class="list-group-item list-group-item-action" href="#list-app" id="list-app-list" role="tab" data-toggle="list" aria-controls="home">Appointments</a>
@@ -112,7 +127,7 @@ if(isset($_GET['cancel']))
     </div><br>
   </div>
   <div class="col-md-8" style="margin-top: 3%;">
-    <div class="tab-content" id="nav-tabContent" style="width: 950px;">
+    <div class="tab-content" id="nav-tabContent" style="width: 1000px;">
       <div class="tab-pane fade show active" id="list-dash" role="tabpanel" aria-labelledby="list-dash-list">
         
               <div class="container-fluid container-fullw bg-white" >
@@ -121,7 +136,8 @@ if(isset($_GET['cancel']))
                <div class="col-sm-4" style="left: 10%">
                   <div class="panel panel-white no-radius text-center">
                     <div class="panel-body">
-                      <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list fa-stack-1x fa-inverse"></i> </span>
+                      <!-- <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list fa-stack-1x fa-inverse"></i> </span> -->
+                      <img src="assets/img/app-history.svg" alt="">
                       <h4 class="StepTitle" style="margin-top: 5%;"> View Appointments</h4>
                       <script>
                         function clickDiv(id) {
@@ -140,7 +156,8 @@ if(isset($_GET['cancel']))
                 <div class="col-sm-4" style="left: 15%">
                   <div class="panel panel-white no-radius text-center">
                     <div class="panel-body">
-                      <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i> </span>
+                      <!-- <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i> </span> -->
+                      <img src="assets/img/prescription.svg" alt="">
                       <h4 class="StepTitle" style="margin-top: 5%;"> Prescriptions</h4>
                         
                       <p class="links cl-effect-1">
@@ -159,18 +176,18 @@ if(isset($_GET['cancel']))
 
     <div class="tab-pane fade" id="list-app" role="tabpanel" aria-labelledby="list-home-list">
         
-              <table class="table table-hover">
+              <table class="table table-hover" style="border-radius: 10px; box-shadow: 0px 0px 3px grey; ">
                 <thead>
                   <tr>
                     <th scope="col">Patient ID</th>
-                    <th scope="col">Appointment ID</th>
+                    <th scope="col">App ID</th>
                     <th scope="col">First Name</th>
                     <th scope="col">Last Name</th>
                     <th scope="col">Gender</th>
                     <th scope="col">Email</th>
                     <th scope="col">Contact</th>
-                    <th scope="col">Appointment Date</th>
-                    <th scope="col">Appointment Time</th>
+                    <th scope="col">App Date</th>
+                    <th scope="col">App Time</th>
                     <th scope="col">Current Status</th>
                     <th scope="col">Action</th>
                     <th scope="col">Prescribe</th>
@@ -253,7 +270,7 @@ if(isset($_GET['cancel']))
       
 
       <div class="tab-pane fade" id="list-pres" role="tabpanel" aria-labelledby="list-pres-list">
-        <table class="table table-hover">
+        <table class="table table-hover" style="border-radius: 10px; box-shadow: 0px 0px 3px grey; ">
                 <thead>
                   <tr>
                     
@@ -385,4 +402,16 @@ if(isset($_GET['cancel']))
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.all.min.js"></script>
   </body>
+
+  <!-- ########################## footer start ########################### -->
+<footer>
+  <!-- Copyright -->
+  <div class="copyright text-center text-white p-3" style="background-color: #314BF6; margin-top:50px; position:fixed;">
+    Copyright © 2021, DokTalk. All rights reserved. | Made with &#x1f9e1; by Group 8
+  </div>
+</footer>
+<!-- Copyright -->
+
+<!-- ########################## footer end ########################### -->
+
 </html>
