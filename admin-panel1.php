@@ -551,7 +551,11 @@ if(isset($_POST['docsub1']))
                    
                   
                   <div class="col-md-4"><label>Consultancy Fees:</label></div>
-                  <div class="col-md-8"><input type="text" class="form-control"  name="docFees" required></div><br><br>
+                  <div class="col-md-8"><input type="text" class="form-control"  name="docFees" required></div><br><br><br>
+
+                  <!-- <form action="upload.php" method="POST" enctype="multipart/form-data">
+                   <input type="file" name="file">
+                   </form> -->
                 </div>
           <input type="submit" name="docsub" value="Add Doctor" class="btn btn-primary">
         </form>

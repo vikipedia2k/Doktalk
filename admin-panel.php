@@ -706,35 +706,35 @@ function get_specs()
 
                       ?>      
 
-     
+      
 
-              <div class="col-md-12">
-                <div class="row">
-                  <div class="col-lg-8 col-md-12" style="margin-top: -7%; margin-bottom: 12rem;">
-                    <div class="panel panel-white">
-                      <div class="panel-heading">
-                        <h5 class="panel-title" style="margin-left:-15px; margin-bottom:-7px;">Edit Profile</h5>
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-lg-8 col-md-12" style="margin-top: -7%; margin-bottom: 12rem;">
+                      <div class="panel panel-white">
+                        <div class="panel-heading">
+                          <h5 class="panel-title" style="margin-left:-15px; margin-bottom:-7px;">Edit Profile</h5>
+                        </div>
+                        <div class="panel-body">
+                          <?php
+                          $sql = mysqli_query($con, "select * from patreg where pid='" . $_SESSION['pid'] . "'");
+                          while ($row = mysqli_fetch_array($sql)) {
+                          ?>
+                            <form action="admin-panel.php" method="POST">
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <label for="email" style="margin-top: 5px;">Email</label>
+                                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" value="<?php echo htmlentities($row['email']); ?>" />
+                                  <button name="update-email" type="submit" class="btn-primary btn-block" style="padding-left: -20em; margin-top: 2rem;">Update</button>
+                                </div>
+                              </div> 
+                            </form> 
+                        <?php } ?> 
+                        </div>
                       </div>
-                      <div class="panel-body">
-                        <?php
-                        $sql = mysqli_query($con, "select * from patreg where pid='" . $_SESSION['pid'] . "'");
-                        while ($row = mysqli_fetch_array($sql)) {
-                        ?>
-                          <form action="admin-panel.php" method="POST">
-                            <div class="row">
-                              <div class="col-md-6">
-                                <label for="email" style="margin-top: 5px;">Email</label>
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" value="<?php echo htmlentities($row['email']); ?>" />
-                                <button name="update-email" type="submit" class="btn-primary btn-block" style="padding-left: -20em; margin-top: 2rem;">Update</button>
-                              </div>
-                            </div> 
-                          </form> 
-                      <?php } ?> 
-                      </div>
-                    </div>
-                  </div>  
-                </div> 
-              </div>     
+                    </div>  
+                  </div> 
+                </div>     
 
 
 
