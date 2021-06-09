@@ -182,8 +182,6 @@ function get_specs()
     .copyright {
       width: 100%;
       font-size: 14px;
-      position: fixed;
-      bottom: 0;
       background-color: #314BF6;
     }
 
@@ -221,8 +219,18 @@ function get_specs()
   <?php
   include 'nav-bar.php';
   ?>
-  <div class="container-fluid" style="margin-top:80px;">
+  <div class="container-fluid" style="margin-top:60px;">
+  <?php
+      $sql = mysqli_query($con, "select * from patreg where pid='" . $_SESSION['pid'] . "'");
+      while ($row = mysqli_fetch_array($sql)) {
+      ?>
+      
+      <?php $imageURL1 = 'uploads/'.$row["image"]; ?>
+      <img src= "<?php echo $imageURL1; ?>" width= "70px" height= "70px" 
+      style="margin-left: 22px; margin-bottom: -4rem;" />
 
+  <?php } ?>
+  
     <h3 style="margin-left: 8%; font-size:21px; padding-bottom: 20px; font-family: 'Poppins', sans-serif;"><span class="welcome">Welcome</span><br><?php echo $username ?>
     </h3>
     <div class="row">
@@ -604,7 +612,8 @@ function get_specs()
             $con = mysqli_connect("localhost", "root", "", "myhmsdb");
             global $con;
             if (isset($_POST['update'])) {
-
+              
+             
               $fname = $_POST['fname'];
               $lname = $_POST['lname'];
               $email = $_POST['email'];
@@ -614,7 +623,47 @@ function get_specs()
               $city = $_POST['city'];
               $contact = $_POST['contact'];
 
-              $sql = mysqli_query($con, "Update patreg set fname='$fname',lname='$lname',address='$address',city='$city',gender='$gender', 
+              $allowedExts = array("jpg", "jpeg", "gif", "png");
+              $parts = explode(".", $_FILES["image"]["name"]);
+              $extension = end($parts);
+              echo $_FILES["image"]["tmp_name"];
+              if ((($_FILES["image"]["type"] == "image/gif")
+              || ($_FILES["image"]["type"] == "image/jpeg")
+              || ($_FILES["image"]["type"] == "image/png")
+              || ($_FILES["image"]["type"] == "image/jpg"))
+              && in_array($extension, $allowedExts))
+              {
+                if ($_FILES["image"]["error"] > 0)
+                {
+                $msg3="Return Code: " . $_FILES["image"]["error"] . "<br />";
+                }
+                else
+                {
+                /* $msg3="Upload: " . $_FILES["file"]["name"] . "<br />";
+                $msg3=$msg3."Type: " . $_FILES["file"]["type"] . "<br />";
+                $msg3=$msg3."Size: " . ($_FILES["file"]["size"] / 1024) . " Kb<br />";
+                $msg3=$msg3."Temp file: " . $_FILES["file"]["tmp_name"] . "<br />";*/
+
+                if (file_exists("uploads/". $_FILES["image"]["name"]))
+                  {
+                  $msg3=$msg3."Since the files already exists rename the file on your comp and upload.";
+                  }
+                  else {
+                  move_uploaded_file($_FILES["image"]["tmp_name"], "uploads/". $_FILES["image"]["name"]);
+                  $name=$_FILES["image"]["name"];
+                  $msg3=$name;
+                  }
+                }
+              }
+              else
+              {
+                //exchanged it with the top code instead of the error msg.
+              move_uploaded_file($_FILES["image"]["tmp_name"], "uploads/". $_FILES["image"]["name"]);
+                  $name=$_FILES["image"]["name"];
+                  $msg3=$name;
+              }
+     
+              $sql = mysqli_query($con, "Update patreg set image='$msg3',fname='$fname',lname='$lname',address='$address',city='$city',gender='$gender', 
                 contact='$contact' where pid='" . $_SESSION['pid'] . "' ");
 
               if ($sql) {
@@ -634,53 +683,25 @@ function get_specs()
                       <h5 class="panel-title" style="margin-left:-15px; margin-bottom:-7px;">Edit Profile</h5>
                     </div>
                     <div class="panel-body">
+                   
+                     
+                      
                       <?php
                       $sql = mysqli_query($con, "select * from patreg where pid='" . $_SESSION['pid'] . "'");
                       while ($row = mysqli_fetch_array($sql)) {
                       ?>
-                        <form action="admin-panel.php" method="POST">
+
+                      <?php $imageURL1 = 'uploads/'.$row["image"];?> 
+                      <img src= " <?php echo $imageURL1; ?>" width= "100px" height="100px" />
+                      
+                        <form action="admin-panel.php" method="POST" enctype="multipart/form-data">
                           <div class="row">
                             <div class="col-md-6">
 
-                            <!-- profile picture upload   -->
-
-                              <form action="admin-panel.php" method="POST" enctype="multipart/form-data">
-                                <input type="file" name="image" value="" class="form-control">
-                                <button type="submit" name="upload" class="button btn-sm">Upload</button><br>
-                              </form>
-                              <?php
-                              $con = mysqli_connect("localhost", "root", "", "image");
+                            <input type="file" name="image" id="file" />
                             
-
-                              if(isset($_POST["upload"])){
-                                $file = $_FILES['image']['name'];
-
-                                $query = "INSERT INTO upload(image) VALUES('$file')";
-                                $res = mysqli_query($con, $query);
-
-                                if($res){
-                                  move_uploaded_file($_FILES['image']['temp_name'], "$file");
-                                }
-                              }
-                              ?>
-                              <?php        
-                              $sel = "SELECT * FROM `upload`";
-                              $que = mysqli_query($con, $sel);
-                              
-                              $output = "";
-
-                              if(mysqli_num_rows($que) < 1){
-                                $output .= "<h3>No image uploaded</h3>";
-                              }
-                              while($row = mysqli_fetch_array($que)){
-                                $output .= "<img src='".$row['image']."' class='my-3' 
-                                style='width:.300px; height:300px;'>";
-
-                              }
-                              ?>
-
-                            <!-- profile picture upload   -->
-   
+                            <!-- <button type="submit" name="submit" class="button btn-sm">Update Image</button><br> -->
+          
                               <label for="fname" style="margin-top: 5px;">First Name</label>
                               <input type="text" class="form-control" name="fname" id="fname" placeholder="First Name" onkeydown="return alphaOnly(event);" value="<?php echo htmlentities($row['fname']); ?>" />
 
@@ -714,7 +735,7 @@ function get_specs()
                                 <small>Update your email</small></a>
 
                               <div class="col-4">
-                                <button type="submit" name="update" class="updateBtn btn-primary btn-block" style="margin-top: 10rem; margin-left: -20em; padding: 2px;">Update</button>
+                                <button type="submit" name="update" class="updateBtn btn-primary btn-block" style="margin-top: 4rem; margin-left: -20em; padding: 2px;">Update</button>
                               </div>
                             </div>
                           </div>
@@ -791,7 +812,7 @@ function get_specs()
 <!-- ########################## footer start ########################### -->
 <footer>
   <!-- Copyright -->
-  <div class="copyright text-center text-white p-3" style="background-color: #314BF6; margin-top:50px; position:fixed;">
+  <div class="copyright text-center text-white p-3" style="background-color: #314BF6; margin-top:50px;">
     Copyright © 2021, DokTalk. All rights reserved. | Made with &#x1f9e1; by Group 8
   </div>
 </footer>

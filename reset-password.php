@@ -24,9 +24,11 @@ if(isset($_POST["password"])) {
 
     if($query) {
          $query = mysqli_query($con, "DELETE FROM resetpasswords WHERE code='$code'");
+         echo "<a href='patient-login.php'>Back to login page</a><br>";
          exit("Password updated successfully!");
+         
     } else {
-
+         echo "<a href='patient-login.php'>Back to login page</a><br>";
          exit("Something went wrong!");
     }
 }

@@ -115,6 +115,9 @@ if(isset($_GET['cancel']))
   <?php
   include 'nav-bar-doc.php';
   ?>
+
+
+
    <div class="container-fluid" style="margin-top:60px;">
     <h3 style = "margin-left: 187px; margin-top: 5rem; font-size:21px; font-family:'Poppins', sans-serif;"> Welcome <br><?php echo $_SESSION['dname'] ?>  </h3>
     <div class="row">

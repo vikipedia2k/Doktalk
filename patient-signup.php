@@ -104,8 +104,10 @@ function checklen()
                     <div class="row">
                         <div class="col-md-8 text-left text-md-left">
                           
-                            <form method="POST" action="func2.php" class="register-form" id="register-form">
-                          
+                            <form method="POST" action="func2.php" class="register-form" id="register-form" enctype="multipart/form-data">
+
+                                    <!-- <input type="file" name="image" value="" class="form-control"/> -->
+
                                     <input type="text" class="form-control" name="fname" id="fname" placeholder="First Name" onkeydown="return alphaOnly(event);" required="" />
                               
                                     <input type="text" class="form-control" name="lname" id="lname" onkeydown="return alphaOnly(event);" placeholder="Last Name" />  

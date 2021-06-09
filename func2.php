@@ -12,11 +12,54 @@ if(isset($_POST['patsub1'])){
   $city=$_POST['city'];
   $contact=$_POST['contact'];
 	$password=$_POST['password'];
+  $password = md5($password);
   $cpassword=$_POST['cpassword'];
+  $cpassword = md5($cpassword);
+
+  $allowedExts = array("jpg", "jpeg", "gif", "png");
+  $parts = explode(".", $_FILES["image"]["name"]);
+  $extension = end($parts);
+  echo $_FILES["image"]["tmp_name"];
+  if ((($_FILES["image"]["type"] == "image/gif")
+  || ($_FILES["image"]["type"] == "image/jpeg")
+  || ($_FILES["image"]["type"] == "image/png")
+  || ($_FILES["image"]["type"] == "image/jpg"))
+  && in_array($extension, $allowedExts))
+  {
+    if ($_FILES["image"]["error"] > 0)
+    {
+    $msg3="Return Code: " . $_FILES["image"]["error"] . "<br />";
+    }
+    else
+    {
+    /* $msg3="Upload: " . $_FILES["file"]["name"] . "<br />";
+    $msg3=$msg3."Type: " . $_FILES["file"]["type"] . "<br />";
+    $msg3=$msg3."Size: " . ($_FILES["file"]["size"] / 1024) . " Kb<br />";
+    $msg3=$msg3."Temp file: " . $_FILES["file"]["tmp_name"] . "<br />";*/
+
+    if (file_exists("uploads/". $_FILES["image"]["name"]))
+      {
+      $msg3=$msg3."Since the files already exists rename the file on your comp and upload.";
+      }
+      else {
+      move_uploaded_file($_FILES["image"]["tmp_name"], "uploads/". $_FILES["image"]["name"]);
+      $name=$_FILES["image"]["name"];
+      $msg3=$name;
+      }
+    }
+  }
+  else
+  {
+    //exchanged it with the top code instead of the error msg.
+  move_uploaded_file($_FILES["image"]["tmp_name"], "uploads/". $_FILES["image"]["name"]);
+      $name=$_FILES["image"]["name"];
+      $msg3=$name;
+  }
+
 
   if($password == $cpassword){
-  	$query = "insert into patreg(fname,lname,gender,email,age,address,city,contact,password,cpassword) 
-    values ('$fname','$lname','$gender','$email','$age','$address','$city','$contact','$password','$cpassword')";
+  	$query = "insert into patreg(image,fname,lname,gender,email,age,address,city,contact,password,cpassword) 
+    values ('$msg3','$fname','$lname','$gender','$email','$age','$address','$city','$contact','$password','$cpassword')";
     
     $result=mysqli_query($con,$query);
     if($result){

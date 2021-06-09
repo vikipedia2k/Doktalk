@@ -23,14 +23,14 @@ session_start();
 <body> 
 <form method="POST" action="func.php" class="register-form" id="login-form">
     <section class="sign-in">
-      <div class="container">
+      <div class="container" style="background-image: url('bodybg/blob-scene-login1.svg');">
         <div class="row doktalk col-md-6">
          <a href="index.php"> <img src="assets/img/doktalk-logo.svg" class="doktalk-logo" alt="logo"> </a> 
         </div>
         <div class="signin-content">
           
           <div class="signin-image">
-            <figure><img src="assets/img/signin-image.jpg" alt="singin-image"></figure>
+            <figure><img src="assets/img/patient-login.svg" alt="singin-image"></figure>
           </div>
   
           <div class="signin-form">
@@ -44,9 +44,7 @@ session_start();
                 <input type="password" name="password2" placeholder="Password" required="" />
               </div>
               <div class="form-group">
-                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
-                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
-              </div>
+                <a href='reset-request.php' class="signup-link">Forgot password?</a>              </div>
               <div class="form-group form-button">
                 <button type="submit" name="patsub" class="btn-submit btn-primary btn-sm btn-block" value="Login">Login</button>
               </div>

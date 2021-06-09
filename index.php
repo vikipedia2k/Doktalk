@@ -51,7 +51,7 @@ function checklen()
 
 <body>
  <!--############### Navbar Start ######################## -->
- <nav class="navbar navbar fixed-top navbar-expand-sm navbar-light bg-light">
+ <nav class="navbar navbar fixed-top navbar-expand-sm navbar-light bg-light" style= "box-shadow: 0px 1px 4px grey;">
         <div class="container">
             <a href="#" class="navbar-brand mb-0 h1">
                 <img class="logo" src="assets/img/doktalk-logo.svg" alt="doktalk-logo" />
@@ -116,13 +116,13 @@ function checklen()
 
     <!--############### Home Start ######################## -->
 
-    <section class="home" id="home">
+    <section class="home" id="home" style="background-image: url('bodybg/wave-haikei-landing.svg'); margin-top: 4rem;" >
         <div class="container">
-            <div class="row min-vh-100 align-items-center text-left text-md-left">            
+            <div class="row align-items-center text-left text-md-left">            
                 <div class="col-md-6 pr-md-5">
                     <img src="assets/img/doctor.png" class="img-fluid" height="auto" alt="doctor-image" width="100%">
                 </div>
-                <div class="content col-md-6 pl-md-5">
+                <div class="content col-md-6 pl-md-5" >
                     <h1>We are here</h1>
                     <h1>for your care.</h1>
                     <h5>Stay Home. Consult Doctors Online.</h5>
