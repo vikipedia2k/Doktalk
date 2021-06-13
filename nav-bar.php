@@ -12,7 +12,7 @@
 </head>
 <!doctype html>
 <html lang="en">
-<nav class="navbar navbar fixed-top navbar-expand-sm navbar-light bg-light">
+<nav class="navbar navbar fixed-top navbar-expand-sm" style="box-shadow: 0px 1px 4px grey; background-color: #e4f1fd;">
         <div class="container">
             <a href="index.php" class="navbar-brand mb-0 h1">
                 <img class="logo" src="assets/img/doktalk-logo.svg" alt="doktalk-logo" />

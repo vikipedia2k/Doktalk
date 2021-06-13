@@ -73,10 +73,10 @@
                 <label for="your_pass">Password</label>
                 <input type="text" name="password2" placeholder="Password" required="" />
               </div>
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
                 <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
-              </div>
+              </div> -->
               <div class="form-group form-button">
                 <button type="submit" class="btn-submit btn-primary btn-sm btn-block" name="adsub">Login</button>
               </div>

@@ -54,14 +54,14 @@
 <body> 
   <form action="func1.php" method="POST">
     <section class="sign-in">
-      <div class="container">
+      <div class="container" style="background-image: url(bodybg/blob-scene-doctor-login.svg);">
         <div class="row doktalk col-md-6">
          <a href="index.php"> <img src="assets/img/doktalk-logo.svg" class="doktalk-logo" alt="logo"> </a> 
         </div>
         <div class="signin-content">
           
           <div class="signin-image">
-            <figure><img src="assets/img/signin-image.jpg" alt="singin image"></figure>
+            <figure><img src="assets/img/doctor-login.svg" alt="singin image"></figure>
           </div>
   
           <div class="signin-form">
@@ -82,14 +82,14 @@
                 <button type="submit" name="docsub1" value="Login" class="btn-submit btn-primary btn-sm btn-block">Login</button>
               </div>
            
-            <a href="doctor-signup.php" class="signup-link">Don't have an account?</a>
+            <!-- <a href="doctor-signup.php" class="signup-link">Don't have an account?</a>
             <div class="social-login">
               <span class="social-label">Or login with</span>
               <ul class="socials">
-                <!-- <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
-                <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li> -->
+                <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li> 
                 <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
-              </ul>
+              </ul> -->
             </div>
           </div>
         </div>

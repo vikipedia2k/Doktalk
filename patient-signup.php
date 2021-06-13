@@ -42,6 +42,14 @@ function checklen()
 
 </script>
 
+<style>
+.signup-image {
+  margin-left: 345px;
+  margin-top: -33rem;
+}
+
+</style>
+
 </head>
 <body>
 
@@ -96,7 +104,7 @@ function checklen()
 
 ?>
 
-            <div class="container">
+            <div class="container"  style="background-image: url('bodybg/blob-scene-signup1.svg');">
                 <div class="doktalk col-3">
                     <a href="index.php"><img src="assets/img/doktalk-logo.svg" class="doktalk-logo" alt="logo"></a> 
                   </div>
@@ -156,7 +164,7 @@ function checklen()
 
                                 
                                 <div class="col-4 signup-image">
-                                    <img src="assets/img/signup-image.jpg" alt="sing up image" />
+                                    <img src="assets/img/signup.svg" alt="sing up image" />
                                 </div>
                                 
                             </form>

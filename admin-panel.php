@@ -677,19 +677,17 @@ function get_specs()
 
             <div class="col-md-12">
               <div class="row">
-                <div class="col-lg-8 col-md-12" style="margin-top: -7%; margin-bottom: 12rem;">
+                <div class="col-lg-8 col-md-12" style="margin-top: -7%; margin-bottom: 12rem";>
                   <div class="panel panel-white">
                     <div class="panel-heading">
                       <h5 class="panel-title" style="margin-left:-15px; margin-bottom:-7px;">Edit Profile</h5>
                     </div>
                     <div class="panel-body">
-                   
-                     
-                      
-                      <?php
+ 
+                    <?php
                       $sql = mysqli_query($con, "select * from patreg where pid='" . $_SESSION['pid'] . "'");
                       while ($row = mysqli_fetch_array($sql)) {
-                      ?>
+                     ?>
 
                       <?php $imageURL1 = 'uploads/'.$row["image"];?> 
                       <img src= " <?php echo $imageURL1; ?>" width= "100px" height="100px" />

@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <?php 
+
+
 $con=mysqli_connect("localhost","root","","myhmsdb");
 
 include('newfunc.php');
+
+
 
 if(isset($_POST['docsub']))
 {
@@ -15,7 +19,48 @@ if(isset($_POST['docsub']))
   $dexperience=$_POST['dexperience'];
   $spec=$_POST['special'];
   $docFees=$_POST['docFees'];
-  $query="insert into doctb(username,password,email,city,pincode,location,experience,spec,docFees)values('$doctor', '$dpassword','$demail','$dcity','$dpincode','$dlocation','$dexperience','$spec','$docFees')";
+
+  $allowedExts = array("jpg", "jpeg", "gif", "png");
+  $parts = explode(".", $_FILES["image"]["name"]);
+  $extension = end($parts);
+  echo $_FILES["image"]["tmp_name"];
+  if ((($_FILES["image"]["type"] == "image/gif")
+  || ($_FILES["image"]["type"] == "image/jpeg")
+  || ($_FILES["image"]["type"] == "image/png")
+  || ($_FILES["image"]["type"] == "image/jpg"))
+  && in_array($extension, $allowedExts))
+  {
+    if ($_FILES["image"]["error"] > 0)
+    {
+    $msg3="Return Code: " . $_FILES["image"]["error"] . "<br />";
+    }
+    else
+    {
+    /* $msg3="Upload: " . $_FILES["file"]["name"] . "<br />";
+    $msg3=$msg3."Type: " . $_FILES["file"]["type"] . "<br />";
+    $msg3=$msg3."Size: " . ($_FILES["file"]["size"] / 1024) . " Kb<br />";
+    $msg3=$msg3."Temp file: " . $_FILES["file"]["tmp_name"] . "<br />";*/
+
+    if (file_exists("uploads/". $_FILES["image"]["name"]))
+      {
+      $msg3=$msg3."Since the files already exists rename the file on your comp and upload.";
+      }
+      else {
+      move_uploaded_file($_FILES["image"]["tmp_name"], "uploads/". $_FILES["image"]["name"]);
+      $name=$_FILES["image"]["name"];
+      $msg3=$name;
+      }
+    }
+  }
+  else
+  {
+    //exchanged it with the top code instead of the error msg.
+  move_uploaded_file($_FILES["image"]["tmp_name"], "uploads/". $_FILES["image"]["name"]);
+      $name=$_FILES["image"]["name"];
+      $msg3=$name;
+  }
+
+  $query="insert into doctb(image,username,password,email,city,pincode,location,experience,spec,docFees)values('$msg3','$doctor', '$dpassword','$demail','$dcity','$dpincode','$dlocation','$dexperience','$spec','$docFees')";
   $result=mysqli_query($con,$query);
   if($result)
     {
@@ -54,16 +99,16 @@ if(isset($_POST['docsub1']))
     <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+        
+        <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <a href="#" class="navbar-brand mb-0 h1">
                 <img class="logo" src="assets/img/doktalk-logo.svg" alt="doktalk-logo" />
-            </a>
+            </a> -->
   <!-- <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Doktalk </a> -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button>
+  </button> -->
 
   <script >
     var check = function() {
@@ -116,7 +161,7 @@ if(isset($_POST['docsub1']))
 }
   </style>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
      <ul class="navbar-nav mr-auto">
        <li class="nav-item">
         <a class="nav-link" href="logout1.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
@@ -126,15 +171,20 @@ if(isset($_POST['docsub1']))
       </li>
     </ul>
   </div>
-</nav>
+</nav> -->
   </head>
   <style type="text/css">
     button:hover{cursor:pointer;}
     #inputbtn:hover{cursor:pointer;}
   </style>
+
   <body style="padding-top:50px;">
+  <?php
+  include 'nav-bar-admin.php';
+  ?>
+
    <div class="container-fluid" style="margin-top:50px;">
-    <h3 style = "margin-left: 40%; padding-bottom: 20px;font-family: 'IBM Plex Sans', sans-serif;"> WELCOME RECEPTIONIST </h3>
+    <h4 style = "margin-top: 3rem; margin-left: 6px; font-family: 'Poppins', sans-serif;"> WELCOME ADMIN </h4>
     <div class="row">
   <div class="col-md-4" style="max-width:25%;margin-top: 3%;">
     <div class="list-group" id="list-tab" role="tablist">
@@ -267,7 +317,7 @@ if(isset($_POST['docsub1']))
         <div class="col-md-2"><input type="submit" name="doctor_search_submit" class="btn btn-primary" value="Search"></div></div>
       </form>
     </div>
-              <table class="table table-hover">
+              <table class="table table-hover" style="border-radius:10px; box-shadow: 0px 0px 3px grey;">
                 <thead>
                   <tr>
                     <th scope="col">Doctor Name</th>
@@ -328,7 +378,7 @@ if(isset($_POST['docsub1']))
       </form>
     </div>
         
-              <table class="table table-hover">
+              <table class="table table-hover" style="border-radius:10px; box-shadow: 0px 0px 3px grey;">
                 <thead>
                   <tr>
                   <th scope="col">Patient ID</th>
@@ -336,8 +386,11 @@ if(isset($_POST['docsub1']))
                     <th scope="col">Last Name</th>
                     <th scope="col">Gender</th>
                     <th scope="col">Email</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">City</th>
                     <th scope="col">Contact</th>
-                    <th scope="col">Password</th>
+                   
                   </tr>
                 </thead>
                 <tbody>
@@ -356,7 +409,7 @@ if(isset($_POST['docsub1']))
                       $address= $row['address'];
                       $city= $row['city'];
                       $contact = $row['contact'];
-                      $password = $row['password'];
+                      
                       
                       echo "<tr>
                         <td>$pid</td>
@@ -368,7 +421,7 @@ if(isset($_POST['docsub1']))
                         <td>$address</td>
                         <td>$city</td>
                         <td>$contact</td>
-                        <td>$password</td>
+                       
                       </tr>";
                     }
 
@@ -387,7 +440,7 @@ if(isset($_POST['docsub1']))
         
     
         
-              <table class="table table-hover">
+              <table class="table table-hover" style="border-radius:10px; box-shadow: 0px 0px 3px grey;">
                 <thead>
                   <tr>
                   <th scope="col">Doctor</th>
@@ -456,7 +509,7 @@ if(isset($_POST['docsub1']))
       </form>
     </div>
         
-              <table class="table table-hover">
+              <table class="table table-hover" style="border-radius:10px; box-shadow: 0px 0px 3px grey;">
                 <thead>
                   <tr>
                   <th scope="col">Appointment ID</th>
@@ -468,9 +521,9 @@ if(isset($_POST['docsub1']))
                     <th scope="col">Contact</th>
                     <th scope="col">Doctor Name</th>
                     <th scope="col">Consultancy Fees</th>
-                    <th scope="col">Appointment Date</th>
-                    <th scope="col">Appointment Time</th>
-                    <th scope="col">Appointment Status</th>
+                    <th scope="col">Apt Date</th>
+                    <th scope="col">Apt Time</th>
+                    <th scope="col">Apt Status</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -520,8 +573,11 @@ if(isset($_POST['docsub1']))
 <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
 
       <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
-        <form class="form-group" method="post" action="admin-panel1.php">
+
+        <form class="form-group" method="post" action="admin-panel1.php" enctype="multipart/form-data">
           <div class="row">
+                  <div class="col-md-4"><label>Profile Image</label></div>
+                  <div class="col-md-8"><input type="file" name="image" value="" class="form-control"/></div><br><br>
                   <div class="col-md-4"><label>Doctor Name:</label></div>
                   <div class="col-md-8"><input type="text" class="form-control" name="doctor" onkeydown="return alphaOnly(event);" required></div><br><br>
                   <div class="col-md-4"><label>Specialization:</label></div>

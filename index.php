@@ -49,9 +49,18 @@ function checklen()
 </script>
 </head>
 
+    
 <body>
- <!--############### Navbar Start ######################## -->
- <nav class="navbar navbar fixed-top navbar-expand-sm navbar-light bg-light" style= "box-shadow: 0px 1px 4px grey;">
+  <style>
+    .navbar-nav .nav-link {
+    color: rgb(0 0 0  / 95%);
+}
+.navbar-nav .nav-link:hover{
+    color: rgb(0 0 0  / 60%);
+}
+    </style>
+ <!-- ############### Navbar Start ######################## -->
+ <nav class="navbar navbar fixed-top navbar-expand-sm" style= "box-shadow: 0px 1px 4px grey; background-color: #e4f1fd;">
         <div class="container">
             <a href="#" class="navbar-brand mb-0 h1">
                 <img class="logo" src="assets/img/doktalk-logo.svg" alt="doktalk-logo" />
@@ -85,7 +94,7 @@ function checklen()
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a href="doctor-login.php" class="dropdown-item">Login</a></li>
-                            <li><a href="doctor-signup.php" class="dropdown-item">Sign up</a></li>
+                            <!-- <li><a href="doctor-signup.php" class="dropdown-item">Sign up</a></li> -->
                         </ul>
                     </li>
                     <li class="nav-item active">
@@ -126,7 +135,7 @@ function checklen()
                     <h1>We are here</h1>
                     <h1>for your care.</h1>
                     <h5>Stay Home. Consult Doctors Online.</h5>
-                    <a href="book-appointment.php"><button class="button">Book Appointment</button></a>
+                    <a href="patient-login.php"><button class="button">Book Appointment</button></a>
                 </div>
             </div>
         </div>
@@ -210,10 +219,10 @@ function checklen()
                             <h2>Book an appointment for consultation</h2>
                             <p>Find experienced doctors across all specialties</p>
                         </div>
-                        <div class="col-md-3">
+                        <!-- <div class="col-md-3">
                             <a href="#"><button type="button" class="btn btn-primary btn-sm" alt="view-all">View
                                     all</button></a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -289,7 +298,7 @@ function checklen()
     <div class="health-blog pt-80 pb-80 bg-grey-1" id="blog">
         <div class="container">
             <div class="heading-block">
-                <h3 class="heading font-bold">Health Blog</h3>
+                <h3 class="heading font-bold">HealthTalk</h3>
                 <p class="sub-heading">Health articles that keep you informed about good health practices</p>
             </div>
             <div class="row mb-5">
@@ -409,22 +418,22 @@ function checklen()
     <!-- <div class="page-divider"></div> -->
 
  <!--######################## Footer start ##################################-->
-<footer class="text-dark" id="contact">
+<footer class="text-dark" id="contact" style="background-color :#28328c;">
     <!-- Grid container -->
     <div class="container p-4">
         <!-- Section: Social media -->
         <section class="text-center mb-4">
             <!-- Facebook -->
-            <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"><i class="fa fa-facebook"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-facebook"></i></a>
 
             <!-- Twitter -->
-            <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"><i class="fa fa-twitter"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-twitter"></i></a>
 
             <!-- Google -->
-            <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"><i class="fa fa-google"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-google"></i></a>
 
             <!-- Instagram -->
-            <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"><i class="fa fa-instagram"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-instagram"></i></a>
 
             <!-- Github -->
             <!--   <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"><i class="fa fa-github"></i></a>   -->
@@ -436,17 +445,17 @@ function checklen()
             <!--Grid row-->
             <div class="row d-flex">
                     <div class="dolktalk-footer-logo col-md-7">
-                        <img src="assets/img/doktalk-logo.svg" alt="footer-logo">
-                        <div class="dolktalk-about-footer row d-flex col-md-7">
+                        <img src="assets/img/doktalk-logo-white.svg" alt="footer-logo">
+                        <div class="dolktalk-about-footer row d-flex col-md-7 text-light">
                         <p>We connect you with the best doctors with seamless online appointment booking to provide you with the best health care.</p>
                     </div>
                     </div>
 
                     <div class="contact-us-form col-md-5 contact-us2">
-                        <p class="pt-2">
+                        <p class="pt-2 text-white">
                             <strong>Contact us</strong>
                         </p>
-                        <div class="form-outline form-dark mb-4">
+                        <div class="form-outline form-light mb-4">
                             <form method="POST" action="contact.php">
                             <input type="text" name="txtName" class="form-control" placeholder="Your Name" value="" onkeydown="return alphaOnly(event);" required/>
                             <input type="email" name="txtEmail" class="form-control" placeholder="Your Email" value="" required />
@@ -464,7 +473,7 @@ function checklen()
         </section>
     </div>
     <!-- Copyright -->
-    <div class="copyright-index text-center text-white p-3" style="background-color: #314BF6; font-size:14px;">
+    <div class="copyright-index text-center text-white p-3" style="background-color: #28328c; font-size:14px;">
         Copyright © 2021, DokTalk. All rights reserved. | Made with &#x1f9e1; by Group 8
     </div>
     <!-- Copyright -->
