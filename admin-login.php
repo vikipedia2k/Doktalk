@@ -53,18 +53,18 @@
 
  <form action="func3.php" method="POST">
     <section class="sign-in">
-      <div class="container">
+      <div class="container" style="background-image: url('bodybg/blob-scene-admin-login.svg');">
         <div class="row doktalk col-md-6">
          <a href="/"> <img src="assets/img/doktalk-logo.svg" class="doktalk-logo" alt="logo"> </a> 
         </div>
         <div class="signin-content">
           
           <div class="signin-image">
-            <figure><img src="assets/img/signin-image.jpg" alt="singin-image"></figure>
+            <figure><img src="assets/img/admin-login.svg" alt="singin-image"></figure>
           </div>
   
-          <div class="signin-form">
-            <h2 class="form-title">Login</h2>
+          <div class="signin-form" style="margin-top: 3em;">
+            <h2 class="form-title">Admin login</h2>
               <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" name="username1" placeholder="User Name" required="" />

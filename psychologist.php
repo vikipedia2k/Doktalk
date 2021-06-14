@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/psychologist.css">
+    <link rel="stylesheet" href="assets/css/psychologist.css">
 
     <title>Psychologist Consultation</title>
 </head>
@@ -18,7 +18,7 @@
     <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
         <div class="container">
             <a href="/" class="navbar-brand mb-0 h1">
-                <img class="logo" src="img/doktalk-logo.svg" alt="doktalk-logo" />
+                <img class="logo" src="assets/img/doktalk-logo.svg" alt="doktalk-logo" />
             </a>
             <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,14 +78,16 @@
 
     <!--############### Navbar End ######################## -->
 
+<nav style="margin-top: 2em; margin-left: 2rem;">
+<a href="index.php"><button class="btn btn-primary btn-sm">< Back</button></a>
+</nav>
 
-
-<section class="general-physician-about">
+<section class="psychologist-about">
     <div class="container">
       
         <div class="row about-column">
             <div class="col-md-6 about-img">
-                <img src="img/general-physician.svg" alt="physician-img">
+                <img src="assets/img/general-physician.svg" alt="physician-img">
              </div>
 
             <div class="col-md-6 content-column">
@@ -168,7 +170,7 @@
         <div class="card mb-3 card-1" style="max-width: 630px;">
             <div class="row card-content">
                 <div class="col-md-4 doc-img">
-                    <img src="img/doctor-card-1.svg" alt="doctor-profile-svg">
+                    <img src="assets/img/doctor-card-1.svg" alt="doctor-profile-svg">
                 </div>
                 <div class="col-md-4 doc-info">
                     <div class="card-body">
@@ -200,7 +202,7 @@
         <div class="card mb-3 card-2" style="max-width: 630px;">
             <div class="row card-content">
                 <div class="col-md-4 doc-img">
-                    <img src="img/doctor-card-1.svg" alt="doctor-profile-svg">
+                    <img src="assets/img/doctor-card-1.svg" alt="doctor-profile-svg">
                 </div>
                 <div class="col-md-4 doc-info">
                     <div class="card-body">
@@ -232,7 +234,7 @@
         <div class="card mb-3 card-2" style="max-width: 630px;">
             <div class="row card-content">
                 <div class="col-md-4 doc-img">
-                    <img src="img/doctor-card-1.svg" alt="doctor-profile-svg">
+                    <img src="assets/img/doctor-card-1.svg" alt="doctor-profile-svg">
                 </div>
                 <div class="col-md-4 doc-info">
                     <div class="card-body">
@@ -264,7 +266,7 @@
         <div class="card mb-3 card-2" style="max-width: 630px;">
             <div class="row card-content">
                 <div class="col-md-4 doc-img">
-                    <img src="img/doctor-card-1.svg" alt="doctor-profile-svg">
+                    <img src="assets/img/doctor-card-1.svg" alt="doctor-profile-svg">
                 </div>
                 <div class="col-md-4 doc-info">
                     <div class="card-body">

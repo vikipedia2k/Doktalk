@@ -158,7 +158,7 @@ function checklen()
                         <p>Private online consultations with doctors in all specializations</p>
                     </div>
                     <div class="col-md-3">
-                        <a href="assets/departments.php"><button type="button" class="btn btn-primary btn-sm" alt="view-all">View
+                        <a href="departments.php"><button type="button" class="btn btn-primary btn-sm" alt="view-all">View
                                 all</button></a>
                     </div>
                 </div>
@@ -169,7 +169,7 @@ function checklen()
                     <div class="card mx-1" style="width: 14rem; ">
                         <img src="assets/img/gen-physician.svg" class="card-img-top" alt="diet">
                         <div class="card-body text-center">
-                            <h5 class="card-title text-center"><a href="assets/general-physician.html">General Physician</a></h5>
+                            <h5 class="card-title text-center"><a href="general-physician.php">General Physician</a></h5>
                         </div>
                     </div>
 
@@ -177,7 +177,7 @@ function checklen()
                         <div class="card mx-1" style="width: 14rem; ">
                             <img src="assets/img/dietitian.svg" class="card-img-top" alt="diet">
                             <div class="card-body text-center">
-                                <h5 class="card-title text-center"><a href="assets/dietitian.html">Dietitian</a></h5>
+                                <h5 class="card-title text-center"><a href="dietitian.php">Dietitian</a></h5>
                             </div>
                         </div>
 
@@ -185,7 +185,7 @@ function checklen()
                             <div class="card mx-1" style="width: 14rem;">
                                 <img src="assets/img/psychologist.svg" class="card-img-top" alt="diet">
                                 <div class="card-body text-center">
-                                    <h5 class="card-title text-center"><a href="assets/psychologist.html">Psychologist</a></h5>
+                                    <h5 class="card-title text-center"><a href="psychologist.php">Psychologist</a></h5>
                                 </div>
                             </div>
 
@@ -193,7 +193,7 @@ function checklen()
                                 <div class="card mx-1" style="width: 14rem;">
                                     <img src="assets/img/dermatologist.svg" class="card-img-top" alt="diet">
                                     <div class="card-body text-center">
-                                        <h5 class="card-title text-center"><a href="assets/dermatologist.html">Dermatologist</a></h5>
+                                        <h5 class="card-title text-center"><a href="dermatologist.php">Dermatologist</a></h5>
                                     </div>
                                 </div>
 
@@ -201,7 +201,7 @@ function checklen()
                                     <div class="card mx-1" style="width: 14rem;">
                                         <img src="assets/img/ayurveda.svg" class="card-img-top" alt="diet">
                                         <div class="card-body text-center">
-                                            <h5 class="card-title text-center"><a href="assets/ayurveda.html">Ayurveda</a></h5>
+                                            <h5 class="card-title text-center"><a href="ayurveda.php">Ayurveda</a></h5>
 
                                         </div>
                                     </div>
@@ -231,11 +231,11 @@ function checklen()
                         <div class="card" style="width: 14rem;">
                             <img src="assets/img/male-doctor.svg" class="card-img-top" alt="diet">
                             <div class="card-body text-center">
-                                <h5 class="card-title text-center"><a href="#">Dr. Sanjay Raut</a></h5>
+                                <h5 class="card-title text-center"><a href="dr.sanjay-raut-profile.php">Dr. Sanjay Raut</a></h5>
                                 <p class="description"><small>MBBS</small><br>
                                     <small>Pune, Maharashtra</small>
                                 </p>
-                                <button class="btn-1 btn-primary btn-sm doctor">Consult Now</button>
+                                <a href="dr.sanjay-raut-profile1.php"><button class="btn-1 btn-primary btn-sm doctor">Consult Now</button></a>
                             </div>
                         </div>
 
@@ -312,7 +312,7 @@ function checklen()
                             <p class="d-inline-block mb-2 text-primary">Coronavirus Updates</p>
                             <div class="mb-1 text-muted">May 1</div>
                             <p class="card-text mb-auto">Caring for COVID-19 patients at home</p>
-                            <a href="assets/blog1.html" class="stretched-link">Read more</a>
+                            <a href="blog/index.html" class="stretched-link">Read more</a>
                         </div>
     
                     </div>
@@ -445,7 +445,7 @@ function checklen()
             <!--Grid row-->
             <div class="row d-flex">
                     <div class="dolktalk-footer-logo col-md-7">
-                        <img src="assets/img/doktalk-logo-white.svg" alt="footer-logo">
+                        <img src="assets/img/doktalk-logo-white.png" alt="footer-logo">
                         <div class="dolktalk-about-footer row d-flex col-md-7 text-light">
                         <p>We connect you with the best doctors with seamless online appointment booking to provide you with the best health care.</p>
                     </div>
@@ -465,7 +465,7 @@ function checklen()
                                 placeholder="Message"></textarea><br>
 
                             <a href=""><button type="submit" name="btnSubmit" class="footer-submit btn btn-primary btn-sm">
-                                Submit</button></a> 
+                                Submit</button></l> 
                             </form>
                         </div>
                     </div>

@@ -9,16 +9,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/general-physician.css">
+    <link rel="stylesheet" href="assets/css/dermatologist.css">
 
-    <title>General Physician Consultation</title>
+    <title>Dietitian Consultation</title>
 </head>
 <body>
     <!--############### Navbar Start ######################## -->
     <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
         <div class="container">
-            <a href="/" class="navbar-brand mb-0 h1">
-                <img class="logo" src="img/doktalk-logo.svg" alt="doktalk-logo" />
+            <a href="index.php" class="navbar-brand mb-0 h1">
+                <img class="logo" src="assets/img/doktalk-logo.svg" alt="doktalk-logo" />
             </a>
             <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +28,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a href="/" class="nav-link">
+                        <a href="index.php" class="nav-link">
                             Home
                         </a>
                     </li>
@@ -70,7 +70,7 @@
                 </ul>
             </div>
             <form class="d-flex">
-                <a href="login.html" target="_blank"><button type="button" class="btn
+                <a href="patient-login.php" target="_blank"><button type="button" class="btn
                 btn-primary">Login | Sign up</button></a>
             </form>
         </div>
@@ -78,23 +78,26 @@
 
     <!--############### Navbar End ######################## -->
 
-
+<nav style="margin-top: 2em; margin-left: 2rem;">
+<a href="index.php"><button class="btn btn-primary btn-sm">< Back</button></a>
+</nav>
 
 <section class="general-physician-about">
     <div class="container">
       
         <div class="row about-column">
             <div class="col-md-6 about-img">
-                <img src="img/general-physician.svg" alt="physician-img">
+                <img src="assets/img/general-physician.svg" alt="physician-img">
              </div>
 
             <div class="col-md-6 content-column">
                 <div class="heading-block">
-                    <h4 class="heading font-bold">General Physician Consultation</h4>
+                    <h4 class="heading font-bold">Dermatologist Consultation</h4>
                 </div> 
                 <h5 class="about-head">About</h5>
-               <p class="about-text">General Physicians provide long-term, comprehensive care and can manage both common and complex diseases. 
-                They examine, diagnose, treat acute illnesses (e.g., infections, influenza) and chronic diseases (e.g., diabetes, high blood pressure)
+               <p class="about-text">Dermatologist specializes in issues related to Skin and Hair. 
+                   They treat conditions, disorders and inflammatory symptoms of any age and gender. 
+                   Common problems like Acne, Pigmentation, Hair Fall, Loose Skin, Excess Hair, Warts are treated.
                 </p>
             </div>
         
@@ -109,7 +112,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 physicians-head">
-                    <h4 class="heading font-bold">Available General Physicians</h4>
+                    <h4 class="heading font-bold">Available Dermatologists</h4>
             </div>
         </div>
         
@@ -169,14 +172,14 @@
         <div class="card mb-3 card-1" style="max-width: 630px;">
             <div class="row card-content">
                 <div class="col-md-4 doc-img">
-                    <img src="img/doctor-card-1.svg" alt="doctor-profile-svg">
+                    <img src="assets/img/doctor-card-1.svg" alt="doctor-profile-svg">
                 </div>
                 <div class="col-md-4 doc-info">
                     <div class="card-body">
-                        <h5 class="card-title">Dr.Sanjay Raut</h5>
+                        <h5 class="card-title">Dr.Manoj Sharma</h5>
                         <p class="card-text"> 
-                                <span style="font-weight:500; font-size:16px;">General Physician</span></p>
-                        <p class="card-text"> MBBS, DNB (General Medicine) </p>
+                                <span style="font-weight:500; font-size:16px;">Dermatologist</span></p>
+                        <p class="card-text"> MBBS, MD </p>
                         <p class="card-text">Pune, Maharashtra</p>
                        
                     </div>
@@ -191,9 +194,9 @@
                     <a href="#"><button class="chat-btn btn-primary btn-sm">Chat</button></a>
                     <a href="#"><button class="call-btn btn-primary btn-sm">Call</button></a>
 
-                    <a href="dr.sanjay-raut-profile.html"><button class="profile-btn btn-primary btn-sm">View Profile</button></a>
+                    <a href="dr.sanjay-raut-pr/"><button class="profile-btn btn-primary btn-sm">View Profile</button></a>
 
-                    <a href="book-appointment.html"><button class="book-btn btn-primary btn-sm">Book Appointment</button></a>
+                    <a href="book-appoin/"><button class="book-btn btn-primary btn-sm">Book Appointment</button></a>
                 </div>
             </div>
         </div>
@@ -201,15 +204,15 @@
         <div class="card mb-3 card-2" style="max-width: 630px;">
             <div class="row card-content">
                 <div class="col-md-4 doc-img">
-                    <img src="img/doctor-card-1.svg" alt="doctor-profile-svg">
+                    <img src="assets/img/doctor-card-1.svg" alt="doctor-profile-svg">
                 </div>
                 <div class="col-md-4 doc-info">
                     <div class="card-body">
-                        <h5 class="card-title">Dr.Sanjay Raut</h5>
+                        <h5 class="card-title">Dr.Akshay Bele</h5>
                         <p class="card-text"> 
-                                <span style="font-weight:500; font-size:16px;">General Physician</span></p>
-                        <p class="card-text"> MBBS, DNB (General Medicine) </p>
-                        <p class="card-text">Pune, Maharashtra</p>
+                                <span style="font-weight:500; font-size:16px;">Dermatologist</span></p>
+                        <p class="card-text"> MBBS, MD </p>
+                        <p class="card-text">Mumbai, Maharashtra</p>
                        
                     </div>
                 </div>
@@ -225,7 +228,7 @@
 
                     <a href="#"><button class="profile-btn btn-primary btn-sm">View Profile</button></a>
 
-                    <a href="book-appointment.html"><button class="book-btn btn-primary btn-sm">Book Appointment</button></a>
+                    <a href="book-appoin/"><button class="book-btn btn-primary btn-sm">Book Appointment</button></a>
                 </div>
             </div>    
         </div>
@@ -233,14 +236,14 @@
         <div class="card mb-3 card-2" style="max-width: 630px;">
             <div class="row card-content">
                 <div class="col-md-4 doc-img">
-                    <img src="img/doctor-card-1.svg" alt="doctor-profile-svg">
+                    <img src="assets/img/doctor-card-1.svg" alt="doctor-profile-svg">
                 </div>
                 <div class="col-md-4 doc-info">
                     <div class="card-body">
-                        <h5 class="card-title">Dr.Sanjay Raut</h5>
+                        <h5 class="card-title">Dr.Yash Patil</h5>
                         <p class="card-text"> 
-                                <span style="font-weight:500; font-size:16px;">General Physician</span></p>
-                        <p class="card-text"> MBBS, DNB (General Medicine) </p>
+                                <span style="font-weight:500; font-size:16px;">Dermatologist</span></p>
+                        <p class="card-text"> MBBS, MD </p>
                         <p class="card-text">Pune, Maharashtra</p>
                        
                     </div>
@@ -257,7 +260,7 @@
 
                     <a href="#"><button class="profile-btn btn-primary btn-sm">View Profile</button></a>
 
-                    <a href="book-appointment.html"><button class="book-btn btn-primary btn-sm">Book Appointment</button></a>
+                    <a href="book-appoin/"><button class="book-btn btn-primary btn-sm">Book Appointment</button></a>
                 </div>
             </div>
         </div>
@@ -265,14 +268,14 @@
         <div class="card mb-3 card-2" style="max-width: 630px;">
             <div class="row card-content">
                 <div class="col-md-4 doc-img">
-                    <img src="img/doctor-card-1.svg" alt="doctor-profile-svg">
+                    <img src="assets/img/doctor-card-1.svg" alt="doctor-profile-svg">
                 </div>
                 <div class="col-md-4 doc-info">
                     <div class="card-body">
                         <h5 class="card-title">Dr.Sanjay Raut</h5>
                         <p class="card-text"> 
-                                <span style="font-weight:500; font-size:16px;">General Physician</span></p>
-                        <p class="card-text"> MBBS, DNB (General Medicine) </p>
+                                <span style="font-weight:500; font-size:16px;">Dermatologist</span></p>
+                        <p class="card-text"> MBBS, MD </p>
                         <p class="card-text">Pune, Maharashtra</p>
                        
                     </div>
@@ -289,7 +292,7 @@
 
                     <a href="#"><button class="profile-btn btn-primary btn-sm">View Profile</button></a>
 
-                    <a href="book-appointment.html"><button class="book-btn btn-primary btn-sm">Book Appointment</button></a>
+                    <a href="book-appoin/"><button class="book-btn btn-primary btn-sm">Book Appointment</button></a>
                 </div>
             </div>
         </div>
@@ -325,5 +328,4 @@
       integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
       crossorigin="anonymous"></script>
 
-</body>
-</html>
+</bo/>

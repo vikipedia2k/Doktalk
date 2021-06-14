@@ -159,6 +159,10 @@ if(isset($_POST['docsub1']))
   background-color: #3c50c1;
   border-color: #3c50c1;
 }
+
+body{
+  background-color: aliceblue;
+}
   </style>
 
   <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -205,7 +209,7 @@ if(isset($_POST['docsub1']))
 
 
       <div class="tab-pane fade show active" id="list-dash" role="tabpanel" aria-labelledby="list-dash-list">
-        <div class="container-fluid container-fullw bg-white" >
+        <div class="container-fluid container-fullw" >
               <div class="row">
                <div class="col-sm-4">
                   <div class="panel panel-white no-radius text-center">
@@ -691,4 +695,15 @@ if(isset($_POST['docsub1']))
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.all.min.js"></script>
   </body>
+
+    <!-- ########################## footer start ########################### -->
+
+  <!-- Copyright -->
+  <div class="text-center text-white p-3" style="background-color: #28328c; margin-top: 4rem;">
+      Copyright © 2021, DokTalk. All rights reserved. | Made with &#x1f9e1; by Group 8   
+    </div>
+  <!-- Copyright -->
+
+ <!-- ########################## footer end ########################### -->
+ 
 </html>

@@ -429,7 +429,9 @@ label.valid {
 
 .signin-form {
   margin-right: 90px;
-  margin-left: 80px; }
+  margin-left: 80px;
+  margin-top: 3em; 
+}
 
 .signin-image {
   margin-left: 40px;

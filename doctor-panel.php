@@ -87,7 +87,9 @@ if(isset($_GET['cancel']))
       bottom: 0;
       background-color: #314BF6;
     }
-
+body{
+  background-image: url('bodybg/wave-haikei-doctor-panel.svg');
+}
   </style>
 
   <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -121,7 +123,7 @@ if(isset($_GET['cancel']))
 
 
    <div class="container-fluid" style="margin-top:60px;">
-    <h3 style = "margin-left: 187px; margin-top: 5rem; font-size:21px; font-family:'Poppins', sans-serif;"> Welcome <br><?php echo $_SESSION['dname'] ?>  </h3>
+   <h3 style="margin-left: 51px;margin-top: 5rem;font-size: 24px;font-family:'Poppins', sans-serif;"> Welcome <br><?php echo $_SESSION['dname'] ?>  </h3>
     <div class="row">
   <div class="col-md-4" style="max-width:18%; margin-top: 3%; margin-left: 3rem;">
     <div class="list-group" id="list-tab" role="tablist">
@@ -135,7 +137,7 @@ if(isset($_GET['cancel']))
     <div class="tab-content" id="nav-tabContent" style="width: 1000px;">
       <div class="tab-pane fade show active" id="list-dash" role="tabpanel" aria-labelledby="list-dash-list">
         
-              <div class="container-fluid container-fullw bg-white" >
+              <div class="container-fluid container-fullw" >
               <div class="row">
 
                <div class="col-sm-4" style="left: 10%">
@@ -143,17 +145,18 @@ if(isset($_GET['cancel']))
                     <div class="panel-body">
                       <!-- <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list fa-stack-1x fa-inverse"></i> </span> -->
                       <img src="assets/img/app-history.svg" alt="">
-                      <h4 class="StepTitle" style="margin-top: 5%;"> View Appointments</h4>
+                      <h4 class="StepTitle" style="margin-top: 5%;"> <a href="#list-app" onclick="clickDiv('#list-app-list')"> 
+                      View Appointments</a></h4>
                       <script>
                         function clickDiv(id) {
                           document.querySelector(id).click();
                         }
                       </script>                      
-                      <p class="links cl-effect-1">
-                        <a href="#list-app" onclick="clickDiv('#list-app-list')">
+                      <!-- <p class="links cl-effect-1">
+                         <a href="#list-app" onclick="clickDiv('#list-app-list')">
                           Appointment List
-                        </a>
-                      </p>
+                        </a> 
+                      </p> -->
                     </div>
                   </div>
                 </div>
@@ -163,12 +166,12 @@ if(isset($_GET['cancel']))
                     <div class="panel-body">
                       <!-- <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i> </span> -->
                       <img src="assets/img/prescription.svg" alt="">
-                      <h4 class="StepTitle" style="margin-top: 5%;"> Prescriptions</h4>
+                      <h4 class="StepTitle" style="margin-top: 5%;"><a href="#list-pres" onclick="clickDiv('#list-pres-list')"> Prescriptions</a></h4>
                         
-                      <p class="links cl-effect-1">
-                        <a href="#list-pres" onclick="clickDiv('#list-pres-list')">
+                      <!-- <p class="links cl-effect-1">
+                         <a href="#list-pres" onclick="clickDiv('#list-pres-list')">
                           Prescription List
-                        </a>
+                        </a> -->
                       </p>
                     </div>
                   </div>
@@ -408,13 +411,11 @@ if(isset($_GET['cancel']))
    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.all.min.js"></script>
   </body>
 
-  <!-- ########################## footer start ########################### -->
-<footer>
-  <!-- Copyright -->
-  <div class="copyright text-center text-white p-3" style="background-color: #314BF6; margin-top:50px; position:fixed;">
+
+ <div class="copyright text-center text-white p-3" style="background-color: #28328c; margin-top:50px; position:fixed;">
     Copyright © 2021, DokTalk. All rights reserved. | Made with &#x1f9e1; by Group 8
   </div>
-</footer>
+
 <!-- Copyright -->
 
 <!-- ########################## footer end ########################### -->

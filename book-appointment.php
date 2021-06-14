@@ -166,7 +166,14 @@
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
 
-</bod/>
+</body>
+
+  <!-- Copyright -->
+  <div class="text-center text-white p-3" style="background-color: #28328c; margin-top: 4rem;">
+      Copyright © 2021, DokTalk. All rights reserved. | Made with &#x1f9e1; by Group 8   
+    </div>
+  <!-- Copyright -->
+</html>
 
 
 <!-- #################### Book Appiointment End #########################-->

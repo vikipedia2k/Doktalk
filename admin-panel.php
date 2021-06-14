@@ -180,9 +180,17 @@ function get_specs()
     }
 
     .copyright {
-      width: 100%;
-      font-size: 14px;
-      background-color: #314BF6;
+    width: 100%;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    background-color: #314BF6;
+    }
+  
+
+   
+    body{
+      background-color: aliceblue;
     }
 
     /*
@@ -219,7 +227,7 @@ function get_specs()
   <?php
   include 'nav-bar.php';
   ?>
-  <div class="container-fluid" style="margin-top:60px;">
+  <div class="container-fluid" style="margin-top:30px;">
   <?php
       $sql = mysqli_query($con, "select * from patreg where pid='" . $_SESSION['pid'] . "'");
       while ($row = mysqli_fetch_array($sql)) {
@@ -249,7 +257,7 @@ function get_specs()
 
 
           <div class="tab-pane fade  show active" id="list-dash" role="tabpanel" aria-labelledby="list-dash-list">
-            <div class="container-fluid container-fullw bg-white" style="margin-top: -45px;">
+            <div class="container-fluid container-fullw" style="margin-top: -45px;">
               <div class="row">
                 <div class="col-sm-4" style="left: 5%;">
                   <div class="panel panel-white text-center">
@@ -466,7 +474,7 @@ function get_specs()
                       </div><br><br>
 
                       <div class="col-md-4">
-                        <input type="submit" name="app-submit" value="Create new entry" class="btn btn-primary" id="inputbtn">
+                        <input type="submit" name="app-submit" value="Book Appointment" class="btn btn-primary" id="inputbtn">
                       </div>
                       <div class="col-md-8"></div>
                     </div>
@@ -808,12 +816,12 @@ function get_specs()
 
 </body>
 <!-- ########################## footer start ########################### -->
-<footer>
+
   <!-- Copyright -->
-  <div class="copyright text-center text-white p-3" style="background-color: #314BF6; margin-top:50px;">
+  <div class="copyright text-center text-white p-3" style="background-color: #28328c; margin-top:50px;">
     Copyright © 2021, DokTalk. All rights reserved. | Made with &#x1f9e1; by Group 8
   </div>
-</footer>
+
 <!-- Copyright -->
 
 <!-- ########################## footer end ########################### -->
